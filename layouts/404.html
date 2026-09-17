@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="hero-wrap" style="min-height:65vh">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> 404 / OFF THE MAP</div>
+    <h1>This page took a <em>wrong turn.</em></h1>
+    <p>The city or guide you requested could not be found. Head back to the atlas and discover somewhere else.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="{{ "/" | relURL }}">Back home ↗</a><a class="btn btn-ghost" href="{{ "/cities/" | relURL }}">Browse cities</a></div>
+  </div>
+  <div class="hero-art"><div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div><div class="hero-orb"><span>404</span></div></div>
+</section>
+{{ end }}
