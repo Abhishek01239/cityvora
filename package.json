@@ -1,0 +1,10 @@
+{
+  "name": "cityvora",
+  "private": true,
+  "scripts": {
+    "build": "hugo --minify"
+  },
+  "dependencies": {
+    "hugo-bin": "0.124.0"
+  }
+}
