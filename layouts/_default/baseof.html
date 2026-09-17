@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}Cityvora — Explore Cities{{ else }}{{ .Title }} | Cityvora{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="theme-color" content="#07090d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title }} | Cityvora">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  {{ with .Params.image }}<meta property="og:image" content="{{ . }}">{{ end }}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2307090d'/><path d='M24 72V28h10v34h28v10z' fill='%2355e6ff'/></svg>">
+  {{ $css := resources.Get "css/cityvora.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="Cityvora home"><span>City</span><b>vora</b></a>
+    <nav>
+      <a href="{{ "/cities/" | relURL }}">Cities</a>
+      <a href="{{ "/#discover" | relURL }}">Discover</a>
+      <a href="{{ "/#about" | relURL }}">About</a>
+    </nav>
+    <a class="header-cta" href="{{ "/cities/" | relURL }}">Explore <span>↗</span></a>
+  </header>
+  <main>{{ block "main" . }}{{ end }}</main>
+  <footer class="site-footer">
+    <div><a class="brand" href="{{ "/" | relURL }}"><span>City</span><b>vora</b></a><p>Find the character of a city.</p></div>
+    <div class="footer-links"><a href="{{ "/cities/" | relURL }}">City guides</a><a href="{{ "/sitemap.xml" | relURL }}">Sitemap</a><a href="{{ "/privacy/" | relURL }}">Privacy</a></div>
+    <small>© {{ now.Year }} Cityvora</small>
+  </footer>
+</body>
+</html>
