@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="hero-wrap">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> CITY DISCOVERY, REIMAGINED</div>
+    <h1>Explore the <em>character</em><br>of every city.</h1>
+    <p>Curated guides for places worth knowing — neighborhoods, food, culture, landmarks and experiences, in one beautiful city atlas.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#discover">Explore cities <span>↗</span></a><a class="btn btn-ghost" href="{{ "/cities/" | relURL }}">Browse all guides</a></div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+    <div class="hero-orb"><span>CV</span></div>
+    <div class="hero-label label-top">01 / CITY ATLAS</div><div class="hero-label label-bottom">PLACES · PEOPLE · STORIES</div>
+  </div>
+</section>
+
+<section class="ticker"><div>CURATED CITIES</div><span>•</span><div>LOCAL CULTURE</div><span>•</span><div>FOOD &amp; STAYS</div><span>•</span><div>WEEKEND IDEAS</div><span>•</span><div>CURATED CITIES</div></section>
+
+<section id="discover" class="section-block">
+  <div class="section-head"><div><span class="section-kicker">01 — DISCOVER</span><h2>Go somewhere <em>interesting.</em></h2></div><a href="{{ "/cities/" | relURL }}">View all cities ↗</a></div>
+  <div class="city-grid">
+    {{ range first 8 (where site.RegularPages "Section" "cities") }}
+      <a class="city-card" href="{{ .RelPermalink }}">
+        <div class="card-image" style="background-image:url('{{ .Params.image }}')"><span class="card-index">{{ printf "%02d" (add 1 .Weight) }}</span><span class="card-arrow">↗</span></div>
+        <div class="card-meta"><span>{{ .Params.state | default "India" }}</span><span>{{ .Params.region | default "CITY GUIDE" }}</span></div>
+        <h3>{{ .Title | replaceRE `(?i) city guide.*` "" }}</h3>
+        <p>{{ .Description | truncate 105 }}</p>
+      </a>
+    {{ else }}
+      {{ $cities := slice (dict "name" "Ahmedabad" "state" "Gujarat" "image" "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1200&q=85") (dict "name" "Mumbai" "state" "Maharashtra" "image" "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=85") (dict "name" "Jaipur" "state" "Rajasthan" "image" "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=85") (dict "name" "Delhi" "state" "Delhi" "image" "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=85") (dict "name" "Bengaluru" "state" "Karnataka" "image" "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=85") (dict "name" "Goa" "state" "Goa" "image" "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=85") (dict "name" "Udaipur" "state" "Rajasthan" "image" "https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1200&q=85") (dict "name" "Rishikesh" "state" "Uttarakhand" "image" "https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1200&q=85") }}
+      {{ range $i, $c := $cities }}<a class="city-card" href="{{ "/cities/" | relURL }}"><div class="card-image" style="background-image:url('{{ $c.image }}')"><span class="card-index">{{ printf "%02d" (add $i 1) }}</span><span class="card-arrow">↗</span></div><div class="card-meta"><span>{{ $c.state }}</span><span>EXPLORE</span></div><h3>{{ $c.name }}</h3><p>Discover the places, flavors and stories that shape this city.</p></a>{{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<section id="about" class="manifesto"><div class="manifesto-mark">CV</div><div><span class="section-kicker">02 — THE CITYVORA IDEA</span><h2>A city is more than a <em>pin on a map.</em></h2><p>We turn destinations into useful, inspiring guides — built around how a place actually feels when you arrive.</p></div></section>
+
+<section class="newsletter"><div><span class="section-kicker">03 — CITYVORA INSIDER</span><h2>Get the next city<br><em>in your inbox.</em></h2></div><form onsubmit="return false"><input type="email" placeholder="Your email address" aria-label="Email address"><button type="submit">Join the list ↗</button></form></section>
+{{ end }}
