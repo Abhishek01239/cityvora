@@ -1,0 +1,51 @@
+name: Generate City Article
+
+on:
+  workflow_dispatch:
+    inputs:
+      city:
+        description: "City to create or refresh"
+        required: true
+        type: string
+      country:
+        description: "Country"
+        required: false
+        default: "India"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Groq client
+        run: pip install groq
+
+      - name: Generate city guide
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CITY_NAME: ${{ inputs.city }}
+          COUNTRY_NAME: ${{ inputs.country }}
+        run: python scripts/generate_city.py
+
+      - name: Commit city guide
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/cities/
+          if git diff --cached --quiet; then
+            echo "No city changes"
+          else
+            git commit -m "feat: generate city guide for ${{ inputs.city }}"
+            git push
+          fi
