@@ -1,0 +1,18 @@
+baseURL = "https://cityvora.vercel.app/"
+languageCode = "en-in"
+title = "Cityvora — Explore Cities"
+theme = ""
+summaryLength = 28
+enableRobotsTXT = true
+canonifyURLs = true
+[pagination]
+  pagerSize = 12
+[permalinks]
+  cities = "/cities/:slug/"
+[taxonomies]
+  tag = "tags"
+  city = "cities"
+[params]
+  description = "Cityvora is a premium city discovery platform for places, food, culture, stays and local experiences."
+  author = "Cityvora"
+  accent = "#55e6ff"
