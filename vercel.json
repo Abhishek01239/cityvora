@@ -1,5 +1,5 @@
 {
-  "buildCommand": "curl -L https://github.com/gohugoio/hugo/releases/download/v0.152.2/hugo_extended_0.152.2_linux-amd64.tar.gz -o /tmp/hugo.tar.gz && mkdir -p /tmp/hugo && tar -xzf /tmp/hugo.tar.gz -C /tmp/hugo && /tmp/hugo/hugo --minify",
+  "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "installCommand": ""
+  "installCommand": "npm install"
 }
