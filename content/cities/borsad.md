@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sun%20Temple%2C%20Borsad.jpg?width=1800"
-image_alt: "Sun Temple in Borsad, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Borsad%20Stepwell%20-%20The%20Guardians.jpg?width=1800"
+image_alt: "Borsad Stepwell"
+image_credit: "Hmk162 / Wikimedia Commons"
 tags: ["Borsad", "Gujarat", "Travel"]
 ---
 
@@ -39,4 +39,5 @@ For the widest hotel choice, stay in **Borsad or nearby Anand**.
 **Day 2:** Karamsad → Anand → Vallabh Vidyanagar.
 
 ## Image Credit
-Borsad Sun Temple image via Wikimedia Commons.
+
+Hero image: **Borsad Stepwell**, via Wikimedia Commons. Hmk162 / Wikimedia Commons.
