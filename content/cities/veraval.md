@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Veraval%20Beach%20Sunset%202013.jpg?width=1800"
-image_alt: "Veraval Beach at sunset"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Somnath%20temple%20gujrat.jpg?width=1800"
+image_alt: "Somnath Temple near Veraval"
+image_credit: "Rohit Sharma / Wikimedia Commons"
 tags: ["Veraval", "Gujarat", "Travel", "Somnath", "Coast"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, Kathiyawadi dishes, farsan and seafood where preferred aroun
 **Day 2:** Veraval harbour → beach → local food.
 
 ## Image Credit
-Veraval Beach image via Wikimedia Commons.
+
+Hero image: **Somnath Temple near Veraval**, via Wikimedia Commons. Rohit Sharma / Wikimedia Commons.
