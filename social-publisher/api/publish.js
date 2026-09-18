@@ -1,17 +1,1 @@
-export default async function handler(req,res){
-  if(req.method!=="POST") return res.status(405).json({error:"POST required"});
-  try{
-    const body=typeof req.body==="string"?JSON.parse(req.body):req.body||{};
-    if(!body.text?.trim()) return res.status(400).json({error:"text is required"});
-    const platforms=Array.isArray(body.platforms)?body.platforms:[];
-    if(!platforms.length) return res.status(400).json({error:"at least one platform is required"});
-    // Provider adapters are intentionally isolated. Add OAuth/token lookup and
-    // official API calls here after each provider app is configured.
-    return res.status(200).json({
-      ok:true,
-      mode:"provider-adapters",
-      message:"Publish request accepted. Configure the requested provider OAuth apps before live publishing.",
-      requested:{platforms,text:body.text,url:body.url||null}
-    });
-  }catch(e){return res.status(400).json({error:"Invalid JSON"})}
-}
+import{sb}from "../lib/supabase.js";import{decrypt}from "../lib/crypto.js";async function li(a,b){const r=await fetch("https://api.linkedin.com/rest/posts",{method:"POST",headers:{Authorization:"Bearer "+decrypt(a.access_token),"X-Restli-Protocol-Version":"2.0.0","Linkedin-Version":process.env.LINKEDIN_API_VERSION||"202608","Content-Type":"application/json"},body:JSON.stringify({author:"urn:li:person:"+a.platform_account_id,commentary:b.text,visibility:"PUBLIC",distribution:{feedDistribution:"MAIN_FEED",targetEntities:[],thirdPartyDistributionChannels:[]},lifecycleState:"PUBLISHED",isReshareDisabledByAuthor:false,...(b.url?{content:{article:{source:b.url,title:b.title||b.text.slice(0,120),description:b.description||""}}}:{})})});if(!r.ok)throw Error(await r.text());return{platform:"linkedin",status:"published",external_post_id:r.headers.get("x-restli-id")}}export default async function handler(req,res){try{const b=typeof req.body==="string"?JSON.parse(req.body):req.body||{},ps=b.platforms||[],uid=process.env.SOCIAL_PUBLISHER_USER_ID,as=await sb("social_accounts?select=*"),out=[];for(const p of ps){const a=as.find(x=>x.user_id===uid&&x.platform===p);if(!a)out.push({platform:p,status:"failed",error:"Account not connected"});else try{out.push(p==="linkedin"?await li(a,b):{platform:p,status:"failed",error:"Provider not implemented yet"})}catch(e){out.push({platform:p,status:"failed",error:e.message})}}res.json({ok:out.some(x=>x.status==="published"),results:out})}catch(e){res.status(500).json({error:e.message})}}
