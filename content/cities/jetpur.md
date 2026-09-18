@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Jetpur%20Bus%20Station.jpg?width=1800"
-image_alt: "Jetpur Bus Station, Gujarat"
-image_credit: "Gazal world / Wikimedia Commons, CC BY-SA 4.0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal%20Jetpur%20state.jpg?width=1800"
+image_alt: "Royal Jetpur State heritage in Jetpur"
+image_credit: "Wikimedia Commons"
 tags: ["Jetpur", "Gujarat", "Travel", "Textiles"]
 ---
 
@@ -38,4 +38,5 @@ Try Gujarati thali, Kathiyawadi dishes, gathiya, fafda-jalebi and farsan around 
 Textile-market visit → local lunch → old city → Gondal excursion.
 
 ## Image Credit
-Jetpur Bus Station image by Gazal world, Wikimedia Commons, CC BY-SA 4.0.
+
+Hero image: **Royal Jetpur State heritage in Jetpur**, via Wikimedia Commons. Wikimedia Commons.
