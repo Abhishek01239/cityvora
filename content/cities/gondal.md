@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gondal%2C%20India.jpg?width=1800"
-image_alt: "Gondal city, Gujarat"
-image_credit: "Bernard Gagnon / Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Naulakha%20Palace%2002.jpg?width=1800"
+image_alt: "Naulakha Palace in Gondal"
+image_credit: "Shakti / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Gondal", "Gujarat", "Travel", "Heritage"]
 ---
 
@@ -40,4 +40,5 @@ Try Kathiyawadi dishes, Gujarati thali, fafda-jalebi and farsan around **Gondal 
 **Day 2:** temple → palace area → Rajkot excursion.
 
 ## Image Credit
-Gondal city image by Bernard Gagnon via Wikimedia Commons.
+
+Hero image: **Naulakha Palace in Gondal**, via Wikimedia Commons. Shakti / Wikimedia Commons, CC BY-SA 3.0.
