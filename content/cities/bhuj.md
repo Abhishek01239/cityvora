@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Kutch"
 currency: "Indian Rupee (INR)"
 best_time: "November to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Bhuj%20skyline%20from%20Bhujia%20Fort%20on%20Bhujia%20Hill%20Bhuj%20Kutch%20Gujarat.jpg?width=1800"
-image_alt: "Bhuj skyline from Bhujia Hill"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Ainamahal%20Bhuj%20Kutch%20Gujarat.jpg?width=1800"
+image_alt: "Aina Mahal in Bhuj"
+image_credit: "Nizil Shah / Wikimedia Commons, Creative Commons"
 tags: ["Bhuj", "Kutch", "Gujarat", "Travel", "Crafts"]
 ---
 
@@ -40,4 +40,5 @@ Try Kutchi dabeli, Gujarati thali, bajra rotla, kadhi and local sweets around **
 **Day 2:** Bhujia Hill → craft villages or a longer Kutch excursion.
 
 ## Image Credit
-Bhuj skyline image via Wikimedia Commons.
+
+Hero image: **Aina Mahal in Bhuj**, via Wikimedia Commons. Nizil Shah / Wikimedia Commons, Creative Commons.
