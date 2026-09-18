@@ -9,7 +9,7 @@ region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
 image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gadhada.jpg?width=1800"
-image_alt: "Swaminarayan Temple in Gadhada, Gujarat"
+image_alt: "Swaminarayan Temple in Gadhada"
 image_credit: "Booksyoric / Wikimedia Commons, CC BY-SA 4.0"
 tags: ["Gadhada", "Gujarat", "Travel", "Pilgrimage"]
 ---
@@ -38,4 +38,5 @@ Stay in **Gadhada town** or use Botad for more accommodation choices.
 Temple visit → Ghela River area → local lunch → Salangpur excursion.
 
 ## Image Credit
-Gadhada temple image by Booksyoric, Wikimedia Commons, CC BY-SA 4.0.
+
+Hero image: **Swaminarayan Temple in Gadhada**, via Wikimedia Commons. Booksyoric / Wikimedia Commons, CC BY-SA 4.0.
