@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Central%20Library%20Baroda%20-%20Vadodara%20-%20Gujarat%20-%20DSC0001.jpg?width=1800"
-image_alt: "Vadodara, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Laksmi%20vilas%20palace.jpg?width=1800"
+image_alt: "Laxmi Vilas Palace in Vadodara"
+image_credit: "Jalodiadeepak / Wikimedia Commons"
 tags: ["Vadodara", "Gujarat", "Travel", "Food", "Heritage"]
 ---
 
@@ -40,4 +40,5 @@ Choose **Alkapuri, Sayajigunj or Fatehgunj** for easy access to transport, resta
 **Day 2:** Kirti Mandir → old-city food walk → Alkapuri.
 
 ## Image Credit
-Image via Wikimedia Commons.
+
+Hero image: **Laxmi Vilas Palace in Vadodara**, via Wikimedia Commons. Jalodiadeepak / Wikimedia Commons.
