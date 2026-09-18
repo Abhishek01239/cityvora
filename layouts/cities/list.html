@@ -1,6 +1,7 @@
 {{ define "main" }}
 <section class="page-hero"><span class="section-kicker">CITY ATLAS</span><h1>All <em>cities.</em></h1><p>Explore Cityvora guides for places, neighborhoods, food, culture and experiences.</p></section>
 <section class="section-block"><div class="city-grid">
-{{ range .Pages.ByTitle }}<a class="city-card" href="{{ .RelPermalink }}"><div class="card-image" style="background-image:url('{{ .Params.image }}')"><span class="card-arrow">↗</span></div><div class="card-meta"><span>{{ .Params.state | default .Params.country }}</span><span>{{ .Params.region | default "CITY GUIDE" }}</span></div><h3>{{ .Title | replaceRE `(?i) city guide.*` "" }}</h3><p>{{ .Description | truncate 120 }}</p></a>{{ end }}
+{{ $cities := where site.RegularPages "Section" "cities" }}
+{{ range $cities.ByTitle }}<a class="city-card" href="{{ .RelPermalink }}"><div class="card-image" style="background-image:url('{{ .Params.image }}')"><span class="card-arrow">↗</span></div><div class="card-meta"><span>{{ .Params.state | default .Params.country }}</span><span>{{ .Params.region | default "CITY GUIDE" }}</span></div><h3>{{ .Title | replaceRE `(?i) city guide.*` "" }}</h3><p>{{ .Description | truncate 120 }}</p></a>{{ end }}
 </div></section>
 {{ end }}
