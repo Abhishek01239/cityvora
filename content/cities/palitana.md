@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Palitana%20temples%2001.jpg?width=1800"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Palitana%20temples.jpg?width=1800"
 image_alt: "Palitana temples on Shatrunjaya Hill"
-image_credit: "Wikimedia Commons, Creative Commons"
+image_credit: "Bernard Gagnon / Wikimedia Commons"
 tags: ["Palitana", "Gujarat", "Jainism", "Travel"]
 ---
 
@@ -39,4 +39,5 @@ Try Gujarati thali, khichdi-kadhi, farsan, fafda-jalebi and local sweets around 
 **Day 2:** Taleti → old city → nearby Bhavnagar excursion.
 
 ## Image Credit
-Palitana temple image via Wikimedia Commons.
+
+Hero image: **Palitana temples on Shatrunjaya Hill**, via Wikimedia Commons. Bernard Gagnon / Wikimedia Commons.
