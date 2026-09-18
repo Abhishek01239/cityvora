@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tharad%20city.jpg?width=1800"
-image_alt: "Tharad city, Gujarat"
-image_credit: "Mefiba66 / Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Nandevi%20%28Ashapura%20Mataji%29%20Temple%20in%20Tharad.jpg?width=1800"
+image_alt: "Nandevi (Ashapura Mataji) Temple in Tharad"
+image_credit: "Nizil Shah / Wikimedia Commons, CC BY-SA 4.0"
 tags: ["Tharad", "Gujarat", "Travel", "North Gujarat"]
 ---
 
@@ -39,4 +39,5 @@ Stay around **Tharad town centre** for local access.
 Temple visit → market walk → local lunch → nearby North Gujarat excursion.
 
 ## Image Credit
-Tharad city image by Mefiba66 via Wikimedia Commons.
+
+Hero image: **Nandevi (Ashapura Mataji) Temple in Tharad**, via Wikimedia Commons. Nizil Shah / Wikimedia Commons, CC BY-SA 4.0.
