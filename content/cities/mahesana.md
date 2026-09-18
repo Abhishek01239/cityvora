@@ -8,7 +8,9 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1800&q=85"
+image: "https://www.mahesana.in/images/mahesana-city-overview.jpg"
+image_alt: "Mahesana city at dusk"
+image_credit: "Mahesana.in"
 tags:
   - Mahesana
   - Mehsana
@@ -54,6 +56,8 @@ For a Mahesana visit, staying in or around the city centre is convenient for mar
 - **Near major roads:** Useful if you are planning day trips toward Modhera, Vadnagar, Becharaji or Taranga.
 - **City outskirts:** Can be practical for travellers arriving by car and continuing toward North Gujarat.
 
+**Hotel booking:** urlBook Mahesana hotelshttps://www.booking.com/city/in/mehsana.html
+
 ## Trip Budget
 
 Approximate **per person, per day**, excluding long-distance travel:
@@ -89,3 +93,7 @@ For a sightseeing circuit, a private car or cab can be convenient because severa
 - Treat Modhera, Taranga, Vadnagar and Becharaji as nearby/district attractions rather than assuming they are all inside Mahesana city.
 
 Mahesana works especially well for travellers who want a base for discovering North Gujarat's historic towns, temples and architectural heritage without staying in a major metropolitan city.
+
+## Image Credit
+
+Mahesana city image sourced from Mahesana.in.
