@@ -1,0 +1,1 @@
+import {sb} from "../lib/supabase.js";export default async function handler(req,res){if(req.method!=="GET")return res.status(405).json({error:"GET required"});try{res.json(await sb("social_accounts?select=id,platform,platform_account_id,account_name,token_expires_at,created_at&order=created_at.desc"))}catch(e){res.status(500).json({error:e.message})}}
