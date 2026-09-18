@@ -9,8 +9,8 @@ region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
 image: "https://commons.wikimedia.org/wiki/Special:FilePath/Amreli%20tower.jpg?width=1800"
-image_alt: "Amreli tower, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image_alt: "Historic tower in Amreli"
+image_credit: "Yogesh Kaveshwar / Wikimedia Commons"
 tags: ["Amreli", "Gujarat", "Travel", "Saurashtra"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, Kathiyawadi food, gathiya, fafda-jalebi and local sweets aro
 **Day 2:** Gohilwad Timbo → nearby Saurashtra excursion.
 
 ## Image Credit
-Amreli Tower image via Wikimedia Commons.
+
+Hero image: **Historic tower in Amreli**, via Wikimedia Commons. Yogesh Kaveshwar / Wikimedia Commons.
