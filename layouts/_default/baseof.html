@@ -25,7 +25,7 @@
       <a href="{{ "/#discover" | relURL }}">Discover</a>
       <a href="{{ "/#about" | relURL }}">About</a>
     </nav>
-    <a class="header-cta" href="{{ "/cities/" | relURL }}">Explore <span>↗</span></a>
+    <a class="header-cta" href="{{ if eq .Section "cities" }}#city-list{{ else }}{{ "/cities/" | relURL }}{{ end }}">Explore <span>↗</span></a>
   </header>
   <main>{{ block "main" . }}{{ end }}</main>
   <footer class="site-footer">
