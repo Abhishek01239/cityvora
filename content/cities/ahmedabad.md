@@ -8,7 +8,9 @@ state: "Gujarat"
 region: "Western India"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=1800&q=85"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sabarmati%20Riverfront%20in%20Ahmedabad.jpg?width=1800"
+image_alt: "Sabarmati Riverfront in Ahmedabad"
+image_credit: "Shashirupapara / Wikimedia Commons, CC BY-SA 4.0"
 tags:
   - Ahmedabad
   - Gujarat
@@ -38,7 +40,7 @@ Stall names and timings can change, so check the current vendor location locally
 
 ## Where to Stay
 
-- **Old City:** Best for heritage and market access.
+- **Old City:** Convenient for heritage and market access.
 - **Navrangpura / CG Road:** Central, with restaurants and shopping.
 - **Satellite / Prahlad Nagar:** More modern hotel and dining options.
 
@@ -68,3 +70,7 @@ Hotel prices vary by date, location and season; check live rates before booking.
 - Start outdoor visits early during hotter months.
 - Check attraction timings before travelling.
 - Keep comfortable footwear for old-city lanes.
+
+## Image Credit
+
+Sabarmati Riverfront image by Shashirupapara, Wikimedia Commons, licensed under CC BY-SA 4.0.
