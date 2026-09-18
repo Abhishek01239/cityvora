@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "South Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Valsad%20City%20View%20from%20Parnera%20Hill%20in%20Gujarat%2CIndia.jpg?width=1800"
-image_alt: "Valsad city view from Parnera Hill"
-image_credit: "Bhartiya97 / Wikimedia Commons, CC BY-SA 4.0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Swaminarayan%20temple%2C%20Tithal%2C%20Valsad.jpg?width=1800"
+image_alt: "Swaminarayan Temple at Tithal near Valsad"
+image_credit: "Wikimedia Commons"
 tags: ["Valsad", "Gujarat", "Travel", "Beaches", "South Gujarat"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati snacks, Parsi-influenced food in nearby Udvada, farsan and sweets a
 **Day 2:** Udvada or Dharampur day trip.
 
 ## Image Credit
-Valsad city view by Bhartiya97 via Wikimedia Commons, CC BY-SA 4.0.
+
+Hero image: **Swaminarayan Temple at Tithal near Valsad**, via Wikimedia Commons. Wikimedia Commons.
