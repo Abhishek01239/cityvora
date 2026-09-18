@@ -9,8 +9,8 @@ region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
 image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mani%20mandir%20at%20morbi.jpg?width=1800"
-image_alt: "Mani Mandir in Morbi, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image_alt: "Mani Mandir in Morbi"
+image_credit: "Nitish.mano / Wikimedia Commons, CC BY-SA 4.0"
 tags: ["Morbi", "Gujarat", "Travel", "Heritage", "Ceramics"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, Kathiyawadi dishes, fafda-jalebi and local farsan around **S
 **Day 2:** Suspension Bridge area → Machchhu River → local markets.
 
 ## Image Credit
-Mani Mandir image via Wikimedia Commons.
+
+Hero image: **Mani Mandir in Morbi**, via Wikimedia Commons. Nitish.mano / Wikimedia Commons, CC BY-SA 4.0.
