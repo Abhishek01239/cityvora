@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/City%20of%20Khambaht%28Tower%20Area%29.jpg?width=1800"
-image_alt: "Khambhat Tower area, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Jami%20Mosque%2C%20Khambhat%2C%20Gujarat%2C%20India.jpg?width=1800"
+image_alt: "Jami Mosque in Khambhat"
+image_credit: "Mufaddal Abdul Hussain / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Khambhat", "Gujarat", "Travel", "Heritage"]
 ---
 
@@ -39,4 +39,5 @@ For more hotel choice, combine Khambhat with **Anand**.
 Morning heritage walk → local lunch → craft shopping → evening market.
 
 ## Image Credit
-Khambhat Tower area image via Wikimedia Commons.
+
+Hero image: **Jami Mosque in Khambhat**, via Wikimedia Commons. Mufaddal Abdul Hussain / Wikimedia Commons, CC BY-SA 3.0.
