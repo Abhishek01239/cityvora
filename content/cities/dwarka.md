@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Dwarka%20Gujarat.jpg?width=1800"
-image_alt: "View of Dwarka, Gujarat"
-image_credit: "Deveshc92 / Wikimedia Commons, CC0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dwarkadhish%20Temple%2C%20Dwarka%2C%20Gujarat.JPG?width=1800"
+image_alt: "Dwarkadhish Temple in Dwarka"
+image_credit: "Kunalmehra7 / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Dwarka", "Gujarat", "Travel", "Temples", "Coast"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, farsan, khichdi-kadhi and simple vegetarian meals around **T
 **Day 2:** Rukmini Temple → Shivrajpur Beach → local market.
 
 ## Image Credit
-View of Dwarka by Deveshc92 via Wikimedia Commons, CC0.
+
+Hero image: **Dwarkadhish Temple in Dwarka**, via Wikimedia Commons. Kunalmehra7 / Wikimedia Commons, CC BY-SA 3.0.
