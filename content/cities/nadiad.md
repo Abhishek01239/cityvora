@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Nadiad%20banner.jpg?width=1800"
-image_alt: "Nadiad, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Santram%20mandir.jpg?width=1800"
+image_alt: "Santram Mandir in Nadiad"
+image_credit: "Wikimedia Commons, public domain"
 tags: ["Nadiad", "Gujarat", "Travel", "Food"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, khaman, fafda-jalebi, farsan and local sweets around **Santr
 **Day 2:** Anand → Vallabh Vidyanagar → return to Nadiad.
 
 ## Image Credit
-Nadiad banner image via Wikimedia Commons.
+
+Hero image: **Santram Mandir in Nadiad**, via Wikimedia Commons. Wikimedia Commons, public domain.
