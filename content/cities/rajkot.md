@@ -7,9 +7,9 @@ country: "India"
 region: "WEST INDIA"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://upload.wikimedia.org/wikipedia/commons/8/83/Beautiful_sky_of_Rajkot_city.jpg"
-image_alt: "Rajkot city skyline under a colorful evening sky"
-image_credit: "Sejal Patel 1 / Wikimedia Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Watson%20Museum.jpg?width=1800"
+image_alt: "Watson Museum in Rajkot"
+image_credit: "Sneha N Shetty / Wikimedia Commons, CC BY-SA 4.0"
 image_license: "CC BY-SA 4.0"
 tags: [rajkot, gujarat, india, food, heritage, markets, hotels, budget, travel]
 ---
@@ -74,4 +74,4 @@ October to February is generally comfortable for walking and outdoor sightseeing
 
 ## Image Credit
 
-Hero image: **"Beautiful sky of Rajkot city" by Sejal Patel 1**, Wikimedia Commons, licensed under **CC BY-SA 4.0**.
+Hero image: **Watson Museum in Rajkot**, via Wikimedia Commons. Sneha N Shetty / Wikimedia Commons, CC BY-SA 4.0.
