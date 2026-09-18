@@ -1,16 +1,1 @@
-export default async function handler(req,res){
-  const platform=req.query.platform;
-  const supported=["instagram","facebook","linkedin","x","youtube","threads","bluesky"];
-  if(!supported.includes(platform)) return res.status(404).json({error:"Unsupported platform"});
-  const env={
-    instagram:process.env.INSTAGRAM_CLIENT_ID,
-    facebook:process.env.FACEBOOK_CLIENT_ID,
-    linkedin:process.env.LINKEDIN_CLIENT_ID,
-    x:process.env.X_CLIENT_ID,
-    youtube:process.env.GOOGLE_CLIENT_ID,
-    threads:process.env.THREADS_CLIENT_ID,
-    bluesky:process.env.BLUESKY_CLIENT_ID
-  };
-  if(!env[platform]) return res.status(503).json({error:`OAuth app not configured for ${platform}`,next:"Add the provider client ID/secret to Vercel environment variables."});
-  return res.status(501).json({error:`OAuth flow for ${platform} is scaffolded but needs its provider-specific redirect URL, scopes and token exchange configured.`});
-}
+import crypto from "node:crypto";export default async function handler(req,res){if(req.query.platform!=="linkedin")return res.status(501).json({error:"Provider being added next"});if(!process.env.LINKEDIN_CLIENT_ID||!process.env.OAUTH_STATE_SECRET)return res.status(503).json({error:"Configure LinkedIn OAuth env vars"});const state=crypto.randomBytes(24).toString("hex"),sig=crypto.createHmac("sha256",process.env.OAUTH_STATE_SECRET).update(state).digest("hex");res.setHeader("Set-Cookie",`oauth_state=${state}.${sig}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=600`);res.redirect("https://www.linkedin.com/oauth/v2/authorization?"+new URLSearchParams({response_type:"code",client_id:process.env.LINKEDIN_CLIENT_ID,redirect_uri:process.env.APP_URL+"/api/oauth/linkedin/callback",state,scope:"openid profile email w_member_social"}))}
