@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Porbandar%20in%20Gujarat%20%28India%29.svg?width=1800"
-image_alt: "Porbandar, Gujarat"
-image_credit: "Milenioscuro / Wikimedia Commons, CC BY-SA 4.0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kirti%20Mandir%20Porbandar.jpg?width=1800"
+image_alt: "Kirti Mandir in Porbandar"
+image_credit: "Wikimedia Commons, Creative Commons"
 tags: ["Porbandar", "Gujarat", "Travel", "Gandhi", "Coast"]
 ---
 
@@ -40,4 +40,5 @@ Stay around **M.G. Road, Sudama Chowk or the waterfront**.
 **Day 2:** beach → local markets → nearby coastal sights.
 
 ## Image Credit
-Porbandar locator image by Milenioscuro via Wikimedia Commons.
+
+Hero image: **Kirti Mandir in Porbandar**, via Wikimedia Commons. Wikimedia Commons, Creative Commons.
