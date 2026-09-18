@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Jamnagar%20in%20Gujarat%20%28India%29.svg?width=1800"
-image_alt: "Jamnagar, Gujarat"
-image_credit: "Milenioscuro / Wikimedia Commons, CC BY-SA 4.0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Lakhota%20Palace%2C%20Jamnagar.jpg?width=1800"
+image_alt: "Lakhota Palace in Jamnagar"
+image_credit: "mrr.sky / Wikimedia Commons, Creative Commons"
 tags: ["Jamnagar", "Gujarat", "Travel", "Food", "Nature"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, fafda-jalebi, gathiya and Kathiyawadi dishes around **Teen B
 **Day 2:** Khijadiya Bird Sanctuary → local markets.
 
 ## Image Credit
-Jamnagar locator image by Milenioscuro via Wikimedia Commons.
+
+Hero image: **Lakhota Palace in Jamnagar**, via Wikimedia Commons. mrr.sky / Wikimedia Commons, Creative Commons.
