@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dakor%20temples%20and%20promenade%20along%20the%20lake%2C%20Gujarat%20012.jpg?width=1800"
-image_alt: "Dakor temples and lake promenade, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dakor%20temple.jpg?width=1800"
+image_alt: "Ranchhodrai Temple in Dakor"
+image_credit: "Sneha G Gupta / Wikimedia Commons, CC BY-SA 4.0"
 tags: ["Dakor", "Gujarat", "Travel", "Pilgrimage"]
 ---
 
@@ -39,4 +39,5 @@ Stay around **Temple Road and the town centre**.
 **Day 2:** nearby Kheda/Anand sights → return for evening food.
 
 ## Image Credit
-Dakor lake and temple image via Wikimedia Commons.
+
+Hero image: **Ranchhodrai Temple in Dakor**, via Wikimedia Commons. Sneha G Gupta / Wikimedia Commons, CC BY-SA 4.0.
