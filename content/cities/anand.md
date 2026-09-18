@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Anand%20banner.jpg?width=1800"
-image_alt: "Anand, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sardar%20Patel%20Memorial%20Karamsad.JPG?width=1800"
+image_alt: "Sardar Patel Memorial at Karamsad near Anand"
+image_credit: "Vijayant.das / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Anand", "Gujarat", "Amul", "Travel", "Food"]
 ---
 
@@ -39,4 +39,5 @@ Try Gujarati thali, khaman, fafda-jalebi, chaas and local dairy products around 
 **Day 2:** Karamsad → Vallabh Vidyanagar → local markets.
 
 ## Image Credit
-Anand image via Wikimedia Commons.
+
+Hero image: **Sardar Patel Memorial at Karamsad near Anand**, via Wikimedia Commons. Vijayant.das / Wikimedia Commons, CC BY-SA 3.0.
