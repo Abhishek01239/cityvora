@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Central Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Gandhinagar-1.jpg?width=1800"
-image_alt: "Gandhinagar, Gujarat"
-image_credit: "Nichalp / Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Akshardham%20Gandhinagar%20Gujarat.jpg?width=1800"
+image_alt: "Akshardham in Gandhinagar"
+image_credit: "Harsh4101991 / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Gandhinagar", "Gujarat", "Travel", "Food", "Heritage"]
 ---
 
@@ -42,4 +42,5 @@ Prices vary by dates and season.
 **Day 2:** Adalaj Stepwell → Indroda → local food and shopping.
 
 ## Image Credit
-Gandhinagar image by Nichalp via Wikimedia Commons.
+
+Hero image: **Akshardham in Gandhinagar**, via Wikimedia Commons. Harsh4101991 / Wikimedia Commons, CC BY-SA 3.0.
