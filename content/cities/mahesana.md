@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://www.mahesana.in/images/mahesana-city-overview.jpg"
-image_alt: "Mahesana city at dusk"
-image_credit: "Mahesana.in"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Toranwali%20Mata%20temple%20gate%20Mehsana.jpg?width=1800"
+image_alt: "Toranwali Mata Temple in Mehsana"
+image_credit: "Nizil Shah / Wikimedia Commons, CC BY-SA 4.0"
 tags:
   - Mahesana
   - Mehsana
@@ -96,4 +96,4 @@ Mahesana works especially well for travellers who want a base for discovering No
 
 ## Image Credit
 
-Mahesana city image sourced from Mahesana.in.
+Hero image: **Toranwali Mata Temple in Mehsana**, via Wikimedia Commons. Nizil Shah / Wikimedia Commons, CC BY-SA 4.0.
