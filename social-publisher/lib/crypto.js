@@ -1,0 +1,3 @@
+import crypto from "node:crypto";const secret=()=>Buffer.from(process.env.APP_ENCRYPTION_KEY||"","hex");
+export function encrypt(v){const k=secret();if(k.length!==32)throw Error("APP_ENCRYPTION_KEY must be 64 hex characters");const iv=crypto.randomBytes(12),c=crypto.createCipheriv("aes-256-gcm",k,iv),e=Buffer.concat([c.update(v,"utf8"),c.final()]);return [iv.toString("hex"),c.getAuthTag().toString("hex"),e.toString("hex")].join(".")}
+export function decrypt(v){const [i,t,d]=v.split("."),c=crypto.createDecipheriv("aes-256-gcm",secret(),Buffer.from(i,"hex"));c.setAuthTag(Buffer.from(t,"hex"));return Buffer.concat([c.update(Buffer.from(d,"hex")),c.final()]).toString("utf8")}
