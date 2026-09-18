@@ -9,7 +9,7 @@ region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
 image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sihor.jpg?width=1800"
-image_alt: "Brahma Kund in Sihor, Gujarat"
+image_alt: "Brahma Kund in Sihor"
 image_credit: "Shivnag / Wikimedia Commons, CC BY-SA 3.0"
 tags: ["Sihor", "Gujarat", "Travel", "Heritage"]
 ---
@@ -38,4 +38,5 @@ Try Gujarati thali, Kathiyawadi food, gathiya, fafda-jalebi and farsan around **
 Brahma Kund → temple visit → local lunch → Bhavnagar excursion.
 
 ## Image Credit
-Brahma Kund image by Shivnag, Wikimedia Commons, CC BY-SA 3.0.
+
+Hero image: **Brahma Kund in Sihor**, via Wikimedia Commons. Shivnag / Wikimedia Commons, CC BY-SA 3.0.
