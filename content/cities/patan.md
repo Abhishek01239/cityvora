@@ -8,8 +8,8 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Rani%20ki%20Vav-Patan-Gujarat-IMG%2020180607%20140309170.jpg?width=1800"
-image_alt: "Rani Ki Vav in Patan, Gujarat"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Rani%20ki%20vav-Patan-Ahmedabad-Gujarat-O0A0110A.jpg?width=1800"
+image_alt: "Rani Ki Vav in Patan"
 image_credit: "Wikimedia Commons, Creative Commons"
 tags: ["Patan", "Gujarat", "Rani Ki Vav", "Patola"]
 ---
@@ -40,4 +40,5 @@ Try Gujarati thali, fafda-jalebi, khaman and local farsan around **Deri Road, St
 **Day 2:** Modhera Sun Temple → local Patan food.
 
 ## Image Credit
-Rani Ki Vav image via Wikimedia Commons.
+
+Hero image: **Rani Ki Vav in Patan**, via Wikimedia Commons. Wikimedia Commons, Creative Commons.
