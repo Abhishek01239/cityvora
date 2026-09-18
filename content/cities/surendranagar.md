@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Surendranagar%2C%20Gujarat%2C%20India%20-%20panoramio.jpg?width=1800"
-image_alt: "Surendranagar, Gujarat"
-image_credit: "Rushi Mehta / Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Trinetreshwar%20Temple%2001.jpg?width=1800"
+image_alt: "Trinetreshwar Temple in Surendranagar district"
+image_credit: "Wikimedia Commons"
 tags: ["Surendranagar", "Gujarat", "Travel"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, Kathiyawadi dishes, fafda-jalebi and farsan around **Station
 **Day 2:** Chotila or Little Rann excursion.
 
 ## Image Credit
-Surendranagar image by Rushi Mehta via Wikimedia Commons.
+
+Hero image: **Trinetreshwar Temple in Surendranagar district**, via Wikimedia Commons. Wikimedia Commons.
