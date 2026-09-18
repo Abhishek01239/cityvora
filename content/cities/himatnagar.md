@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Station%20Road%20Himmatnagar.jpg?width=1800"
-image_alt: "Station Road in Himatnagar, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Tower%20Chok%20Himmatnagar.jpg?width=1800"
+image_alt: "Tower Chowk in Himatnagar"
+image_credit: "Gazal world / Wikimedia Commons, CC BY-SA 4.0"
 tags: ["Himatnagar", "Gujarat", "Travel"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, fafda-jalebi, gathiya and farsan around **Station Road, Towe
 **Day 2:** Dolat Vilas → Darbari Vav → Akodara.
 
 ## Image Credit
-Himatnagar Station Road image via Wikimedia Commons.
+
+Hero image: **Tower Chowk in Himatnagar**, via Wikimedia Commons. Gazal world / Wikimedia Commons, CC BY-SA 4.0.
