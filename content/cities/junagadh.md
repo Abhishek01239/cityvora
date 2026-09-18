@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Saurashtra"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Junagadh%2C%20India.jpg?width=1800"
-image_alt: "Junagadh city from Uparkot Fort"
-image_credit: "Bernard Gagnon / Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Uparkot%20fort%20of%20Junagadh.jpg?width=1800"
+image_alt: "Uparkot Fort in Junagadh"
+image_credit: "Wikimedia Commons, Creative Commons"
 tags: ["Junagadh", "Gujarat", "Travel", "Girnar", "Heritage"]
 ---
 
@@ -40,4 +40,5 @@ Try Gujarati thali, Kathiyawadi food, fafda-jalebi and local farsan around **Kal
 **Day 2:** Girnar area → Sakkarbaug → local food.
 
 ## Image Credit
-Junagadh city image by Bernard Gagnon via Wikimedia Commons.
+
+Hero image: **Uparkot Fort in Junagadh**, via Wikimedia Commons. Wikimedia Commons, Creative Commons.
