@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Western India"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sabarmati%20Riverfront%20in%20Ahmedabad.jpg?width=1800"
-image_alt: "Sabarmati Riverfront in Ahmedabad"
-image_credit: "Shashirupapara / Wikimedia Commons, CC BY-SA 4.0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sabarmati%20Ashram%20Ahmedabad.jpg?width=1800"
+image_alt: "Sabarmati Ashram in Ahmedabad"
+image_credit: "Wikimedia Commons, public domain"
 tags:
   - Ahmedabad
   - Gujarat
@@ -73,4 +73,4 @@ Hotel prices vary by date, location and season; check live rates before booking.
 
 ## Image Credit
 
-Sabarmati Riverfront image by Shashirupapara, Wikimedia Commons, licensed under CC BY-SA 4.0.
+Hero image: **Sabarmati Ashram in Ahmedabad**, via Wikimedia Commons. Wikimedia Commons, public domain.
