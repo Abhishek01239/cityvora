@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "North Gujarat"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Modhera%20sun%20temple%20gujarat.jpg?width=1800"
-image_alt: "Modhera Sun Temple, Gujarat"
-image_credit: "Wikimedia Commons, Creative Commons"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/SUN%20TEMPLE%20MODHERA%20GUJARAT.jpg?width=1800"
+image_alt: "Modhera Sun Temple"
+image_credit: "MaheshhModi20 / Wikimedia Commons"
 tags: ["Modhera", "Gujarat", "Sun Temple", "Heritage"]
 ---
 
@@ -41,4 +41,5 @@ Entry fees and transport costs can change.
 **Evening:** return to Mehsana or Patan.
 
 ## Image Credit
-Modhera Sun Temple image via Wikimedia Commons.
+
+Hero image: **Modhera Sun Temple**, via Wikimedia Commons. MaheshhModi20 / Wikimedia Commons.
