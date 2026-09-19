@@ -11,7 +11,7 @@
     <div class="city-3d-overlay"><span class="section-kicker">3D CITY VIEW</span><strong>{{ $city }}</strong><small>Drag to orbit · wheel to zoom</small></div>
   </section>
   <div class="article-progress" data-article-progress aria-hidden="true"></div><header class="article-head"><span class="section-kicker">{{ .Params.region | default "CITY GUIDE" }} · {{ .Params.country | default "INDIA" }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p><div class="article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span>·</span><span>{{ .ReadingTime }} min read</span></div></header>
-  {{ with .Params.image }}<div class="article-hero" style="background-image:url('{{ . }}')"></div>{{ end }}
+  {{ with .Params.image }}<div class="article-hero" style="background-image:url('{{ . }}')"></div>{{ with $.Params.image_credit }}<p class="image-credit">{{ . }}</p>{{ end }}{{ end }}
   <section class="location-explorer" data-reveal>
     <div class="location-head">
       <div><span class="section-kicker">CITY MAP</span><h2>Find it on the <em>map.</em></h2><p>Open the exact city, food and hotel searches directly in Google Maps.</p></div>
