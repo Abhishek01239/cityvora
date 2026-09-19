@@ -6,6 +6,10 @@
 {{ $hotelMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "hotels in %s" $mapsCity) | urlquery) }}
 {{ $placesMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "tourist attractions in %s" $mapsCity) | urlquery) }}
 <article class="article-page" data-reveal>
+  <section class="city-3d-banner" data-city-3d data-city-name="{{ $city }}">
+    <canvas class="cityvora-3d-canvas" aria-label="Interactive 3D {{ $city }} city visualization"></canvas>
+    <div class="city-3d-overlay"><span class="section-kicker">3D CITY VIEW</span><strong>{{ $city }}</strong><small>Drag to orbit · wheel to zoom</small></div>
+  </section>
   <div class="article-progress" data-article-progress aria-hidden="true"></div><header class="article-head"><span class="section-kicker">{{ .Params.region | default "CITY GUIDE" }} · {{ .Params.country | default "INDIA" }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p><div class="article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span>·</span><span>{{ .ReadingTime }} min read</span></div></header>
   {{ with .Params.image }}<div class="article-hero" style="background-image:url('{{ . }}')"></div>{{ end }}
   <section class="location-explorer" data-reveal>
