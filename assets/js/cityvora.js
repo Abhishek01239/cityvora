@@ -92,21 +92,48 @@
     updateArticle();
   }
 
-  // Newsletter feedback
+  // Newsletter signup: real POST when an endpoint is configured.
   const form = document.querySelector('[data-newsletter]');
   if (form) {
-    form.addEventListener('submit', event => {
+    const status = form.querySelector('[data-newsletter-status]');
+    const input = form.querySelector('input[type="email"]');
+    const button = form.querySelector('button');
+
+    form.addEventListener('submit', async event => {
       event.preventDefault();
-      const input = form.querySelector('input[type="email"]');
-      const button = form.querySelector('button');
       if (!input || !button) return;
+
       if (!input.checkValidity()) {
         input.reportValidity();
         return;
       }
-      button.textContent = 'You’re on the list ✓';
+
+      const endpoint = (form.getAttribute('action') || '').trim();
+      if (!endpoint) {
+        if (status) status.textContent = 'Newsletter signup is not connected yet.';
+        return;
+      }
+
       button.disabled = true;
-      input.disabled = true;
+      button.textContent = 'Joining…';
+      if (status) status.textContent = '';
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Signup failed');
+
+        form.reset();
+        button.textContent = 'You’re on the list ✓';
+        if (status) status.textContent = 'Thanks — you’re subscribed.';
+      } catch (error) {
+        button.disabled = false;
+        button.textContent = 'Join the list ↗';
+        if (status) status.textContent = 'Something went wrong. Please try again.';
+      }
     });
-  }
-})();
+  };
