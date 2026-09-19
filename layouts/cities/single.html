@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $city := .Title | replaceRE `(?i) city guide.*` "" | trim }}
+{{ $city := .Title | replaceRE `(?i) city guide.*` "" }}
 {{ $mapsCity := printf "%s, %s, %s" $city (.Params.state | default "") (.Params.country | default "India") }}
 {{ $cityMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ($mapsCity | urlquery) }}
 {{ $foodMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "best food in %s" $mapsCity) | urlquery) }}
