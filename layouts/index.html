@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section class="hero-wrap">
+<section class="hero-wrap" data-reveal>
   <div class="hero-copy">
     <div class="eyebrow"><span class="pulse"></span> CITY DISCOVERY, REIMAGINED</div>
     <h1>Explore the <em>character</em><br>of every city.</h1>
@@ -13,13 +13,13 @@
   </div>
 </section>
 
-<section class="ticker"><div>CURATED CITIES</div><span>•</span><div>LOCAL CULTURE</div><span>•</span><div>FOOD &amp; STAYS</div><span>•</span><div>WEEKEND IDEAS</div><span>•</span><div>CURATED CITIES</div></section>
+<section class="ticker" data-reveal><div>CURATED CITIES</div><span>•</span><div>LOCAL CULTURE</div><span>•</span><div>FOOD &amp; STAYS</div><span>•</span><div>WEEKEND IDEAS</div><span>•</span><div>CURATED CITIES</div></section>
 
-<section id="discover" class="section-block">
+<section id="discover" class="section-block" data-reveal>
   <div class="section-head"><div><span class="section-kicker">01 — DISCOVER</span><h2>Go somewhere <em>interesting.</em></h2></div><a href="{{ "/cities/" | relURL }}">View all cities ↗</a></div>
   <div class="city-grid">
     {{ range $i, $page := first 8 (where site.RegularPages "Section" "cities") }}
-      <a class="city-card" href="{{ $page.RelPermalink }}">
+      <a class="city-card interactive-card" data-tilt data-city-card data-city="{{ $page.Title }}" data-state="{{ $page.Params.state }}" data-region="{{ $page.Params.region }}" href="{{ $page.RelPermalink }}">
         <div class="card-image" style="background-image:url('{{ $page.Params.image }}')"><span class="card-index">{{ printf "%02d" (add $i 1) }}</span><span class="card-arrow">↗</span></div>
         <div class="card-meta"><span>{{ $page.Params.state | default "India" }}</span><span>{{ $page.Params.region | default "CITY GUIDE" }}</span></div>
         <h3>{{ $page.Title | replaceRE `(?i) city guide.*` "" }}</h3>
@@ -32,7 +32,7 @@
   </div>
 </section>
 
-<section id="about" class="manifesto"><div class="manifesto-mark">CV</div><div><span class="section-kicker">02 — THE CITYVORA IDEA</span><h2>A city is more than a <em>pin on a map.</em></h2><p>We turn destinations into useful, inspiring guides — built around how a place actually feels when you arrive.</p></div></section>
+<section id="about" class="manifesto" data-reveal><div class="manifesto-mark">CV</div><div><span class="section-kicker">02 — THE CITYVORA IDEA</span><h2>A city is more than a <em>pin on a map.</em></h2><p>We turn destinations into useful, inspiring guides — built around how a place actually feels when you arrive.</p></div></section>
 
-<section class="newsletter"><div><span class="section-kicker">03 — CITYVORA INSIDER</span><h2>Get the next city<br><em>in your inbox.</em></h2></div><form onsubmit="return false"><input type="email" placeholder="Your email address" aria-label="Email address"><button type="submit">Join the list ↗</button></form></section>
+<section class="newsletter" data-reveal><div><span class="section-kicker">03 — CITYVORA INSIDER</span><h2>Get the next city<br><em>in your inbox.</em></h2></div><form data-newsletter><input type="email" placeholder="Your email address" aria-label="Email address"><button type="submit">Join the list ↗</button></form></section>
 {{ end }}
