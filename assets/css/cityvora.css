@@ -49,3 +49,5 @@ body{overflow-x:hidden}
 @media(max-width:900px){.atlas-3d-strip{display:block}.atlas-stat{text-align:left;margin-top:35px}.city-3d-banner{margin:0 20px;height:270px}}
 @media(max-width:560px){.hero-3d{height:330px}.hero-3d-ui{font-size:7px}.atlas-3d-strip h2{font-size:34px}.city-3d-banner{height:240px}}
 @media(prefers-reduced-motion:reduce){.hero-3d,.city-3d-banner{cursor:default}}
+
+.newsletter-form{position:relative}.newsletter-status{position:absolute;left:0;bottom:-25px;margin:0;font-size:11px;color:var(--accent)}.newsletter-form button:disabled{opacity:.65;cursor:wait}.newsletter-form input:invalid:not(:placeholder-shown){border-color:#8b5555}.newsletter-form input:focus:invalid{box-shadow:0 0 0 3px rgba(255,100,100,.08)}
