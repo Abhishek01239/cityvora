@@ -15,10 +15,12 @@
   {{ $css := resources.Get "css/cityvora.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   {{ block "head" . }}{{ end }}
+  {{ $js := resources.Get "js/cityvora.js" | js.Build (dict "targetPath" "js/cityvora.js" "minify" true) | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
 </head>
-<body>
+<body><div class="pointer-spotlight" aria-hidden="true"></div><div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="noise"></div>
-  <header class="site-header">
+  <header class="site-header" data-reveal>
     <a class="brand" href="{{ "/" | relURL }}" aria-label="Cityvora home"><span>City</span><b>vora</b></a>
     <nav>
       <a href="{{ "/cities/" | relURL }}">Cities</a>
@@ -28,7 +30,7 @@
     <a class="header-cta" href="{{ if eq .Section "cities" }}#city-list{{ else }}{{ "/cities/" | relURL }}{{ end }}">Explore <span>↗</span></a>
   </header>
   <main>{{ block "main" . }}{{ end }}</main>
-  <footer class="site-footer">
+  <footer class="site-footer" data-reveal>
     <div><a class="brand" href="{{ "/" | relURL }}"><span>City</span><b>vora</b></a><p>Find the character of a city.</p></div>
     <div class="footer-links"><a href="{{ "/cities/" | relURL }}">City guides</a><a href="{{ "/sitemap.xml" | relURL }}">Sitemap</a><a href="{{ "/privacy/" | relURL }}">Privacy</a></div>
     <small>© {{ now.Year }} Cityvora</small>
