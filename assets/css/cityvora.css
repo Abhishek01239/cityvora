@@ -33,3 +33,19 @@ body{overflow-x:hidden}
 .article-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,9,13,.32));pointer-events:none}
 @media(max-width:700px){.pointer-spotlight{display:none}.city-search{max-width:none}.interactive-card{transform:none!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.pointer-spotlight{display:none}[data-reveal]{opacity:1;transform:none}}
+
+
+/* 3D Cityvora layer */
+.hero-3d{isolation:isolate;cursor:grab;background:radial-gradient(circle at 50% 48%,rgba(85,230,255,.09),transparent 52%)}
+.hero-3d:active,.city-3d-banner:active{cursor:grabbing}
+.cityvora-3d-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none}
+.hero-3d-ui{position:absolute;left:24px;right:24px;bottom:24px;display:flex;justify-content:space-between;pointer-events:none;font-size:8px;letter-spacing:1.7px;color:#6e7b87;z-index:2}
+.hero-3d-ui span:last-child{color:var(--accent)}
+.atlas-3d-strip{max-width:var(--max);margin:0 auto;padding:85px 28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:end;justify-content:space-between;gap:50px}
+.atlas-3d-strip h2{font-size:44px;max-width:720px;margin:12px 0}.atlas-3d-strip p{color:var(--muted);max-width:620px;margin:0;font-size:14px}
+.atlas-stat{min-width:150px;text-align:right}.atlas-stat strong{display:block;font-size:70px;line-height:.8;letter-spacing:-5px;color:var(--accent)}.atlas-stat span{display:block;margin-top:12px;font-size:8px;letter-spacing:1.8px;color:#6e7b87}
+.city-3d-banner{max-width:1184px;height:310px;margin:0 auto 0;position:relative;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 50%,rgba(85,230,255,.08),transparent 58%);cursor:grab}
+.city-3d-overlay{position:absolute;left:24px;bottom:22px;z-index:2;display:flex;flex-direction:column;gap:4px;pointer-events:none;text-shadow:0 2px 14px #07090d}.city-3d-overlay strong{font-size:28px;letter-spacing:-1px}.city-3d-overlay small{color:#7e8a95;font-size:9px;letter-spacing:.7px}
+@media(max-width:900px){.atlas-3d-strip{display:block}.atlas-stat{text-align:left;margin-top:35px}.city-3d-banner{margin:0 20px;height:270px}}
+@media(max-width:560px){.hero-3d{height:330px}.hero-3d-ui{font-size:7px}.atlas-3d-strip h2{font-size:34px}.city-3d-banner{height:240px}}
+@media(prefers-reduced-motion:reduce){.hero-3d,.city-3d-banner{cursor:default}}
