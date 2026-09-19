@@ -92,7 +92,7 @@
     updateArticle();
   }
 
-  // Newsletter signup: real POST when an endpoint is configured.
+  // Newsletter signup: subscribe through the Cityvora Brevo endpoint.
   const form = document.querySelector('[data-newsletter]');
   if (form) {
     const status = form.querySelector('[data-newsletter-status]');
@@ -108,32 +108,31 @@
         return;
       }
 
-      const endpoint = (form.getAttribute('action') || '').trim();
-      if (!endpoint) {
-        if (status) status.textContent = 'Newsletter signup is not connected yet.';
-        return;
-      }
-
       button.disabled = true;
       button.textContent = 'Joining…';
       if (status) status.textContent = '';
 
       try {
-        const response = await fetch(endpoint, {
+        const response = await fetch(form.getAttribute('action') || '/api/subscribe', {
           method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({ email: input.value.trim() })
         });
 
-        if (!response.ok) throw new Error('Signup failed');
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Signup failed');
 
         form.reset();
+        button.disabled = false;
         button.textContent = 'You’re on the list ✓';
-        if (status) status.textContent = 'Thanks — you’re subscribed.';
+        if (status) status.textContent = 'Thanks — check your inbox for a welcome email.';
       } catch (error) {
         button.disabled = false;
         button.textContent = 'Join the list ↗';
-        if (status) status.textContent = 'Something went wrong. Please try again.';
+        if (status) status.textContent = error.message || 'Something went wrong. Please try again.';
       }
     });
-  };
+  }
