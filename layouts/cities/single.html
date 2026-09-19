@@ -5,10 +5,10 @@
 {{ $foodMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "best food in %s" $mapsCity) | urlquery) }}
 {{ $hotelMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "hotels in %s" $mapsCity) | urlquery) }}
 {{ $placesMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "tourist attractions in %s" $mapsCity) | urlquery) }}
-<article class="article-page">
-  <header class="article-head"><span class="section-kicker">{{ .Params.region | default "CITY GUIDE" }} · {{ .Params.country | default "INDIA" }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p><div class="article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span>·</span><span>{{ .ReadingTime }} min read</span></div></header>
+<article class="article-page" data-reveal>
+  <div class="article-progress" data-article-progress aria-hidden="true"></div><header class="article-head"><span class="section-kicker">{{ .Params.region | default "CITY GUIDE" }} · {{ .Params.country | default "INDIA" }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p><div class="article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span>·</span><span>{{ .ReadingTime }} min read</span></div></header>
   {{ with .Params.image }}<div class="article-hero" style="background-image:url('{{ . }}')"></div>{{ end }}
-  <section class="location-explorer">
+  <section class="location-explorer" data-reveal>
     <div class="location-head">
       <div><span class="section-kicker">CITY MAP</span><h2>Find it on the <em>map.</em></h2><p>Open the exact city, food and hotel searches directly in Google Maps.</p></div>
       <a class="location-main-link" href="{{ $cityMap }}" target="_blank" rel="noopener">Open city map ↗</a>
@@ -20,7 +20,7 @@
       <a class="location-card" href="{{ $placesMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">PLACES</span><strong>Things to do in {{ $city }}</strong><small>Landmarks, attractions and experiences</small></div><b>↗</b></a>
     </div>
   </section>
-  <div class="article-layout"><aside><div class="fact-card"><span class="section-kicker">QUICK FACTS</span><dl>{{ with $.Params.state }}<dt>State</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.currency }}<dt>Currency</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.best_time }}<dt>Best time</dt><dd>{{ . }}</dd>{{ end }}</dl></div></aside><div class="prose">{{ .Content }}</div></div>
+  <div class="article-layout" data-reveal><aside><div class="fact-card interactive-card" data-tilt><span class="section-kicker">QUICK FACTS</span><dl>{{ with $.Params.state }}<dt>State</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.currency }}<dt>Currency</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.best_time }}<dt>Best time</dt><dd>{{ . }}</dd>{{ end }}</dl></div></aside><div class="prose">{{ .Content }}</div></div>
   {{ with .Params.tags }}<footer class="article-tags">{{ range . }}<span>#{{ . }}</span>{{ end }}</footer>{{ end }}
 </article>
 {{ end }}
