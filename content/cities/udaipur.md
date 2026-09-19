@@ -7,7 +7,8 @@ country: "India"
 region: "NORTH INDIA"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?auto=format&fit=crop&w=1600&q=85"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur%20-%20City%20Palace.jpg?width=1800"
+image_credit: "Wikimedia Commons — prithvi, CC BY-SA 4.0"
 tags: [udaipur, rajasthan, india, lakes, heritage, travel]
 ---
 
