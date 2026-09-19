@@ -19,4 +19,3 @@ canonifyURLs = true
   description = "Cityvora is a premium city discovery platform for places, food, culture, stays and local experiences."
   author = "Cityvora"
   accent = "#55e6ff"
-  newsletter_endpoint = "https://formspree.io/f/mljddylo"
