@@ -1,7 +1,8 @@
 ---
 title: "Vadnagar City Guide"
 description: "Explore Vadnagar's ancient heritage, Kirti Toran, temples, food and stays."
-image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=85"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/An%20HDR%20image%20of%20Kirti%20Toran%20-%20Vadnagar.jpg?width=1800"
+image_credit: "Wikimedia Commons — Anvesh Jadav, CC BY-SA 4.0"
 ---
 
 Vadnagar is one of Gujarat's historic towns, with a long archaeological and cultural record. Its signature landmark is **Kirti Toran**, the pair of richly carved 12th-century gateways beside Sharmistha Lake. citeturn1search17turn1search3
