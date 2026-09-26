@@ -1,62 +1,66 @@
 ---
 title: "Jaipur City Guide: Forts, Food, Markets and Stay Budget"
-description: "A brief Jaipur guide covering forts, palaces, food streets, markets, hotel areas, daily budgets and a two-day plan."
-date: 2026-09-17
+description: "A concise Jaipur guide to its famous heritage landmarks, local food areas, stays, budgets and practical maps."
+date: 2026-09-26
 state: "Rajasthan"
 country: "India"
 region: "NORTH INDIA"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1600&q=85"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/City%20Palace%20in%20Jaipur.jpg?width=1800"
+image_credit: "Wikimedia Commons — City Palace in Jaipur.jpg, CC BY-SA 4.0"
 tags: [jaipur, rajasthan, india, heritage, food, hotels, budget, travel]
 ---
 
-Jaipur combines Rajput-era forts and palaces with colorful bazaars, crafts and a strong Rajasthani food culture.
+Jaipur, Rajasthan's capital, is the historic **Pink City**, founded in 1727 by Maharaja Sawai Jai Singh II. Rajasthan Tourism highlights Amber Palace, City Palace, Jantar Mantar and Hawa Mahal among its major attractions. citeturn0search0turn0search1
 
 ## Places to Explore
 
-- **Amber Fort** — major hilltop fort outside the historic center.
-- **City Palace** — royal complex in the old city.
-- **Hawa Mahal** — iconic façade beside the old-city markets.
-- **Jantar Mantar** — historic astronomical instruments.
-- **Nahargarh Fort** — hilltop views over Jaipur.
+- **City Palace** — royal complex in the walled city, combining Rajput and Mughal architecture. citeturn0search1
+- **Hawa Mahal** — Jaipur's iconic five-storey Palace of Winds. citeturn0search0
+- **Amber Palace** — UNESCO-listed hilltop palace complex around 11 km from Jaipur. citeturn0search0
+- **Jantar Mantar** — UNESCO World Heritage astronomical observatory. citeturn0search0
+- **Nahargarh Fort** — hilltop fort with broad city views.
 
-## Food & Local Food Areas
+**Attractions map:** [Explore Jaipur attractions](https://www.google.com/maps/search/?api=1&query=Jaipur+Rajasthan+tourist+attractions)
 
-- **Masala Chowk:** Popular food area near Ram Niwas Garden; sample Rajasthani snacks and street food.
-- **MI Road:** Established restaurants and casual food options.
-- **Johari Bazaar:** Traditional sweets, snacks and market food around the old city.
-- **Raja Park:** Broad choice of casual restaurants and local snacks.
+## Food to Try
 
-Vendor names and timings can change, so verify current details locally.
+- **Lassiwala, MI Road** — traditional lassi stop.
+- **Rawat Mishthan Bhandar, Station Road** — known for pyaaz kachori and Rajasthani sweets.
+- **LMB (Laxmi Mishthan Bhandar), Johari Bazaar** — traditional sweets and Rajasthani dishes.
+- **Masala Chowk, Ram Niwas Garden** — multiple local food stalls in one place.
+
+Try **pyaaz kachori, ghewar, dal baati churma, lassi and Rajasthani thali**. Vendor menus and timings can change, so verify before visiting.
+
+**Food map:** [Find Jaipur food spots](https://www.google.com/maps/search/?api=1&query=Jaipur+Rajasthan+food)
 
 ## Where to Stay
 
-- **Bani Park:** Many budget and mid-range hotels, with relatively easy access to the old city.
-- **C-Scheme:** Central area with restaurants and cafés.
-- **MI Road:** Convenient for first-time visitors and transport.
-- **Amer:** Useful if you want to stay close to Amber Fort.
+- **Bani Park** — budget and mid-range hotels.
+- **MI Road / C-Scheme** — central, with restaurants and easy transport.
+- **Old City** — convenient for heritage sightseeing.
+- **Amer** — useful for travellers prioritising Amber Fort.
 
-**Hotel booking:** urlBook Jaipur hotelshttps://www.booking.com/city/in/jaipur.html
+**Hotel booking:** [Search Jaipur hotels](https://www.booking.com/city/in/jaipur.html)
 
-## Trip Budget
+## Budget
 
 Approximate **per person, per day**, excluding flights:
 
 - **Budget:** ₹1,500–₹3,000
 - **Mid-range:** ₹3,500–₹7,000
-- **Comfort/premium:** ₹8,000+
-- **Food:** roughly ₹300–₹1,500/day.
-- **Local transport:** roughly ₹150–₹600/day.
+- **Premium:** ₹8,000+
+- **Food:** ₹300–₹1,500/day
+- **Local transport:** ₹150–₹600/day
+- **Hotels:** roughly ₹1,000–₹8,000+ per night depending on area, season and property.
 
-Hotel and attraction prices vary by season and date; check live rates and official attraction information before travelling.
+Attraction prices can change, so check official attraction information before visiting.
 
-## Two-Day Plan
+## Quick Plan
 
-**Day 1:** Amber Fort → City Palace → Jantar Mantar → Hawa Mahal → Johari Bazaar.
+**Day 1:** City Palace → Jantar Mantar → Hawa Mahal → Johari Bazaar → Masala Chowk.
 
-**Day 2:** Nahargarh Fort → local lunch → markets/crafts → Masala Chowk evening food stop.
+**Day 2:** Amber Palace → Nahargarh Fort → local food → Jaipur markets.
 
-## Practical Tips
-
-Jaipur can be hot outside winter. Start fort visits early, carry water and group attractions by area to reduce travel time. Compare craftsmanship and prices before buying souvenirs.
+**City map:** [Open Jaipur on Google Maps](https://www.google.com/maps/search/?api=1&query=Jaipur+Rajasthan)
