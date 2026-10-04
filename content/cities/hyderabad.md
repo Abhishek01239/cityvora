@@ -1,5 +1,6 @@
 ---
 title: "Hyderabad City Guide: Charminar, Biryani, Heritage and Budget"
+slug: "hyderabad"
 description: "A practical Hyderabad guide covering Old City landmarks, biryani and street food, hotel areas, daily budgets and a simple two-day itinerary."
 date: 2026-10-04T12:30:00+05:30
 draft: false
