@@ -9,7 +9,7 @@ canonifyURLs = true
   pagerSize = 12
 
 [permalinks]
-  cities = "/cities/:slug/"
+  cities = "/cities/:filename/"
 
 [taxonomies]
   tag = "tags"
