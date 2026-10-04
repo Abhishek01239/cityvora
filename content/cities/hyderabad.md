@@ -9,9 +9,9 @@ state: "Telangana"
 region: "South India"
 currency: "Indian Rupee (INR)"
 best_time: "October to February"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Charminar_Hyderabad_Dec_2019.jpg?width=1800"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Charminar%2C_Hyderabad%2C_India_2019.jpg/1920px-Charminar%2C_Hyderabad%2C_India_2019.jpg"
 image_alt: "Charminar in Hyderabad"
-image_credit: "Wikimedia Commons"
+image_credit: "IcyB201299 / Wikimedia Commons, CC BY-SA 4.0"
 tags:
   - Hyderabad
   - Telangana
@@ -92,4 +92,4 @@ Hyderabad works well as a short city break focused on heritage and food, or as a
 
 ## Image Credit
 
-Hero image: **Charminar in Hyderabad**, via Wikimedia Commons.
+Hero image: **Charminar in Hyderabad** by IcyB201299, via Wikimedia Commons (CC BY-SA 4.0).
