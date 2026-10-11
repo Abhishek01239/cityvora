@@ -9,10 +9,9 @@ region: "Western India"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
 image: "https://commons.wikimedia.org/wiki/Special:FilePath/Sabarmati%20Ashram%20Ahmedabad.jpg?width=1800"
-image_alt: "Representative heritage image for the Mansa / Gandhinagar region"
+image_alt: "Representative heritage image for the Mansa Gandhinagar region"
 image_credit: "Wikimedia Commons; representative regional image (Mansa-specific Commons hero image not confirmed)"
 tags:
-  - Mansa
   - Gujarat
   - India
   - City Guide
@@ -23,11 +22,11 @@ Mansa is a town in Gandhinagar district, north of Ahmedabad and close to the sta
 
 ## Places to Explore
 
-- **Mahudi Jain Temple (Mahudi)** — major Jain tirth dedicated to Padmaprabh and Ghantakarna Mahavir; busy around Kali Chaudas.
-- **Darbargarh and local heritage** — historic fort-related structures in Mansa.
-- **Local temples** — Gayatri Shaktipeeth, Umiya Mataji, Dwarkadhish, Swaminarayan and other neighbourhood shrines.
-- **Malan Lake / Malav Lake and Chandrasar Pond** — local water bodies for a short walk.
-- **Mansa Vav and Vav Darvaja** — stepwell and gate points of local interest.
+- **Mahudi Jain Temple (Mahudi)** - major Jain tirth dedicated to Padmaprabh and Ghantakarna Mahavir; busy around Kali Chaudas.
+- **Darbargarh and local heritage** - historic fort-related structures in Mansa.
+- **Local temples** - Gayatri Shaktipeeth, Umiya Mataji, Dwarkadhish, Swaminarayan and other neighbourhood shrines.
+- **Malan Lake / Malav Lake and Chandrasar Pond** - local water bodies for a short walk.
+- **Mansa Vav and Vav Darvaja** - stepwell and gate points of local interest.
 
 ## Food & Local Food Areas
 
@@ -48,19 +47,19 @@ Stall names and timings can change, so check the current vendor location locally
 
 Approximate **per person, per day**, excluding intercity trains or flights:
 
-- **Budget:** ₹1,000–₹2,200
-- **Mid-range:** ₹2,500–₹5,000
-- **Comfort:** ₹6,000+
-- **Food:** roughly ₹250–₹1,200/day.
+- **Budget:** Rs 1,000-2,200
+- **Mid-range:** Rs 2,500-5,000
+- **Comfort:** Rs 6,000+
+- **Food:** roughly Rs 250-1,200/day.
 - **Local transport:** autos, buses or hired car; Mahudi is a short trip.
 
 Hotel prices vary by date and festival periods.
 
 ## Two-Day Plan
 
-**Day 1:** Arrive Mansa → local temples or Darbargarh → evening lake or town walk and Gujarati meal.
+**Day 1:** Arrive Mansa, local temples or Darbargarh, evening lake or town walk and Gujarati meal.
 
-**Day 2:** Morning visit to Mahudi Jain Temple → continue to Gandhinagar or Ahmedabad.
+**Day 2:** Morning visit to Mahudi Jain Temple, continue to Gandhinagar or Ahmedabad.
 
 ## Before You Go
 
