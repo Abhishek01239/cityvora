@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Western India"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Adalaj_Stepwell.jpg?width=1800"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Adalaj_stepwell_-_horizontal_view.jpg?width=1800"
 image_alt: "Adalaj Stepwell near the Dehgam / Gandhinagar region"
-image_credit: "Wikimedia Commons; Adalaj Stepwell is a nearby major landmark often visited from the Dehgam–Gandhinagar area — not located inside Dehgam town itself"
+image_credit: "Wikimedia Commons; Adalaj Stepwell is a nearby major landmark often visited from the Dehgam-Gandhinagar area — not located inside Dehgam town itself"
 tags:
   - Dehgam
   - Dahegam
@@ -20,7 +20,7 @@ tags:
   - Travel
 ---
 
-Dehgam (also spelled Dahegam) is a municipality and taluka headquarters in Gandhinagar district, about 30 km from Gandhinagar and 40–45 km from Ahmedabad. It has roots going back centuries under successive dynasties and later Gaekwad administration; today it is a quiet agricultural and small-industry town with easy access to regional heritage sites.
+Dehgam (also spelled Dahegam) is a municipality and taluka headquarters in Gandhinagar district, about 30 km from Gandhinagar and 40-45 km from Ahmedabad. It has roots going back centuries under successive dynasties and later Gaekwad administration; today it is a quiet agricultural and small-industry town with easy access to regional heritage sites.
 
 ## Places to Explore
 
@@ -28,7 +28,7 @@ Dehgam (also spelled Dahegam) is a municipality and taluka headquarters in Gandh
 - **Town centre** — everyday Gujarati market life and community spaces; statues of B.R. Ambedkar and Sardar Vallabhbhai Patel are local landmarks.
 - **Adalaj Stepwell** — major historic stepwell a short drive away (often combined with Gandhinagar / Ahmedabad itineraries).
 - **Nal Sarovar Bird Sanctuary** — wetland birding destination within reasonable day-trip range (seasonal).
-- **Nandol Dehegam railway station area** — on the Ahmedabad–Udaipur line, useful for rail travellers.
+- **Nandol Dehegam railway station area** — on the Ahmedabad-Udaipur line, useful for rail travellers.
 
 ## Food & Local Food Areas
 
@@ -72,4 +72,4 @@ Prices rise during major festivals and peak winter tourist weeks in the Ahmedaba
 
 ## Image Credit
 
-Hero image: Adalaj Stepwell (Wikimedia Commons). This is a major nearby heritage site frequently visited from the Dehgam–Gandhinagar corridor; it is not located inside Dehgam municipal limits.
+Hero image: Adalaj Stepwell (Wikimedia Commons). This is a major nearby heritage site frequently visited from the Dehgam-Gandhinagar corridor; it is not located inside Dehgam municipal limits.

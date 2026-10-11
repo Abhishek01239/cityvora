@@ -8,9 +8,9 @@ state: "Gujarat"
 region: "Western India"
 currency: "Indian Rupee (INR)"
 best_time: "October to March"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Darbargarh_Mansa%2C_Gandhinagar.jpg?width=1800"
-image_alt: "Darbargarh at Mansa, Gandhinagar district"
-image_credit: "Wikimedia Commons (Vishwajeet singh solanki), CC0"
+image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mahudi_Jain_Temple.jpg?width=1800"
+image_alt: "Mahudi Jain Temple area in Mansa taluka, Gandhinagar district"
+image_credit: "Wikimedia Commons; Mahudi is in Mansa taluka — representative temple image for the Mansa area"
 tags:
   - Mansa
   - Gujarat
@@ -23,7 +23,7 @@ Mansa is a town in Gandhinagar district, north of Ahmedabad and close to the sta
 
 ## Places to Explore
 
-- **Mahudi Jain Temple (Mahudi)** — major Śvetāmbara Jain tirth dedicated to Padmaprabh and Ghantakarna Mahavir; popular especially around Kali Chaudas.
+- **Mahudi Jain Temple (Mahudi)** — major Svetambara Jain tirth dedicated to Padmaprabh and Ghantakarna Mahavir; popular especially around Kali Chaudas.
 - **Darbargarh / local heritage structures** — historic fort-related site in Mansa.
 - **Local temples** — Gayatri Shaktipeeth, Umiya Mataji, Dwarkadhish, Swaminarayan and other neighbourhood shrines.
 - **Malan Lake / Malav Lake and Chandrasar Pond** — local water bodies for a short stroll.
@@ -71,4 +71,4 @@ Hotel prices vary by date and festival periods (especially around Jain observanc
 
 ## Image Credit
 
-Hero image: Darbargarh Mansa, Gandhinagar, via Wikimedia Commons (Vishwajeet singh solanki), CC0.
+Hero image: Mahudi Jain Temple area (Wikimedia Commons). Mahudi lies in Mansa taluka of Gandhinagar district.
