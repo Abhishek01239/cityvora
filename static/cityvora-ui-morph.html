@@ -115,7 +115,7 @@
       <div class="content" data-content="8"><div class="content-inner"><div class="toggle-track" id="toggle-track"><div class="toggle-knob" id="toggle-knob"></div></div><span class="toggle-label">Save this place</span></div></div>
       <div class="content" data-content="9"><div class="content-inner"><div class="tabs"><div class="tab-blob" id="tab-blob"></div><span class="tab selected">Overview</span><span class="tab">Neighborhoods</span><span class="tab">Saved</span></div></div></div>
       <div class="content" data-content="10"><div class="content-inner"><div class="chart"><div class="chart-head"><div><div class="chart-kicker">PLACES SAVED THIS WEEK</div><div class="chart-total">+28 <span style="font-size:12px;color:#888;font-weight:450">new discoveries</span></div></div><div class="chart-range">7 days⌄</div></div><svg viewBox="0 0 520 155" preserveAspectRatio="none"><path class="chart-grid" d="M0 15H520M0 55H520M0 95H520M0 135H520"/><path class="chart-area" id="chart-area" d="M0 128 L73 115 L146 120 L219 76 L292 91 L365 49 L438 59 L520 19 L520 155 L0 155Z"/><path class="chart-line" id="chart-line" d="M0 128 L73 115 L146 120 L219 76 L292 91 L365 49 L438 59 L520 19" pathLength="1"/><circle class="chart-dot" id="chart-dot" cx="365" cy="49" r="6"/></svg><div class="tooltip" id="tooltip"><b>Thu, 12 Oct</b>8 places saved</div></div></div></div>
-      <div class="content" data-content="11"><div class="content-inner palette"><div class="palette-input"><i class="magnify"></i><span class="typed" id="typed"></span><i class="caret"></i><span class="shortcut">ESC</span></div><div class="result"><span class="result-icon">⌖</span><span>Old Town, Jaipur</span><small>↵</small></div></div></div>
+      <div class="content" data-content="11"><div class="content-inner palette"><div class="palette-input"><i class="magnify"></i><span class="typed" id="typed"></span><i class="caret"></i><span class="shortcut">⌘K</span></div><div class="result"><span class="result-icon">⌖</span><span>Old Town, Jaipur</span><small>↵</small></div></div></div>
       <div class="content" data-content="12"><div class="content-inner toast"><span class="toast-check">✓</span><span class="toast-copy"><strong>Saved to your list</strong><small>Old Town, Jaipur</small></span></div></div>
       <div class="content" data-content="13"><div class="content-inner"><span class="label">Explore the city</span><span class="arrow">↗</span></div></div>
     </section></div>
@@ -245,6 +245,8 @@
         shape.style.backgroundColor=colorMix('#ffffff','#111111',ink);
         shape.style.color=colorMix('#111111','#ffffff',ink);
         shape.classList.toggle('ink',ink>.52);
+        const spinner=$('.spinner');
+        if(spinner) spinner.style.transform=`rotate(${clamp((phase/BEAT-1),0,1)*360}deg)`;
         camera.style.transform=`translate(-50%,-50%) scale(${cam})`;
         const c=cursorAt(phase); cursor.style.left=c[0]+'px';cursor.style.top=c[1]+'px';
         const u=(phase-tr.beat*BEAT)/BEAT;
@@ -307,10 +309,27 @@
       const dots=$('#beat-dots');for(let i=0;i<28;i++){const d=document.createElement('i');if(i%4===0)d.className='bar';dots.appendChild(d);}
       seek(0);
       // Playback is initiated only by an explicit click; renderers call seek(t) directly.
-      let playing=false,raf=0,startAt=0;
+      let playing=false,raf=0,startAt=0,clickContext=null,clickSource=null;
       const audio=$('#music');
-      function play(){ if(playing)return;playing=true;startAt=performance.now();audio.currentTime=MUSIC_OFFSET;audio.play().catch(()=>{});const tick=now=>{if(!playing)return;const t=((now-startAt)/1000)%PERIOD;seek(t);audio.currentTime=MUSIC_OFFSET+t;raf=requestAnimationFrame(tick);};raf=requestAnimationFrame(tick); }
-      window.addEventListener('keydown',e=>{if(e.code==='Space'&&!e.repeat){e.preventDefault();play();}if(e.code==='Escape'){playing=false;cancelAnimationFrame(raf);seek(0);audio.pause();}});
+      function startClickTrack(){
+        const AudioContext=window.AudioContext||window.webkitAudioContext;
+        if(!AudioContext)return;
+        clickContext ||= new AudioContext();
+        const rate=clickContext.sampleRate, length=Math.ceil(PERIOD*rate);
+        const buffer=clickContext.createBuffer(1,length,rate), samples=buffer.getChannelData(0);
+        // Each 22 ms tap peaks on the measured beat-relative cursor press (8% into the beat).
+        for(const beat of [1.08,2.08,5.08,10.08,18.08,19.08]){
+          const start=Math.round(beat*BEAT*rate), count=Math.round(.022*rate);
+          for(let n=0;n<count && start+n<length;n++){
+            const t=n/rate, envelope=Math.exp(-t/.0085);
+            samples[start+n]+=.085*envelope*(.72*Math.cos(2*Math.PI*1800*t)+.28*Math.cos(2*Math.PI*650*t));
+          }
+        }
+        clickSource=clickContext.createBufferSource();clickSource.buffer=buffer;clickSource.loop=true;clickSource.loopEnd=PERIOD;
+        clickSource.connect(clickContext.destination);clickContext.resume();clickSource.start();
+      }
+      function play(){ if(playing)return;playing=true;startAt=performance.now();audio.currentTime=MUSIC_OFFSET;audio.play().catch(()=>{});startClickTrack();const tick=now=>{if(!playing)return;const t=((now-startAt)/1000)%PERIOD;seek(t);audio.currentTime=MUSIC_OFFSET+t;raf=requestAnimationFrame(tick);};raf=requestAnimationFrame(tick); }
+      window.addEventListener('keydown',e=>{if(e.code==='Space'&&!e.repeat){e.preventDefault();play();}if(e.code==='Escape'){playing=false;cancelAnimationFrame(raf);seek(0);audio.pause();if(clickSource){clickSource.stop();clickSource=null;}if(clickContext)clickContext.suspend();}});
       window.addEventListener('pointerdown',play,{once:true});
     })();
   </script>
