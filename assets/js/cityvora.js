@@ -2,6 +2,31 @@
   const root = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // The homepage loop starts silently only when motion is allowed; sound is opt-in.
+  const motionVideo = document.querySelector('[data-motion-video]');
+  const motionSound = document.querySelector('[data-motion-sound]');
+  if (motionVideo && motionSound) {
+    if (!reduced) {
+      const playback = motionVideo.play();
+      if (playback && typeof playback.catch === 'function') playback.catch(() => {});
+    }
+    motionSound.addEventListener('click', async () => {
+      motionVideo.muted = !motionVideo.muted;
+      const enabled = !motionVideo.muted;
+      motionSound.textContent = enabled ? 'Sound on' : 'Sound off';
+      motionSound.setAttribute('aria-pressed', String(enabled));
+      motionSound.setAttribute('aria-label', enabled ? 'Mute sound' : 'Enable sound');
+      if (enabled && motionVideo.paused) {
+        try { await motionVideo.play(); } catch (_) {
+          motionVideo.muted = true;
+          motionSound.textContent = 'Sound off';
+          motionSound.setAttribute('aria-pressed', 'false');
+          motionSound.setAttribute('aria-label', 'Enable sound');
+        }
+      }
+    });
+  }
+
   // Page-load reveal
   requestAnimationFrame(() => root.classList.add('cv-ready'));
 

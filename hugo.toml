@@ -3,7 +3,7 @@ languageCode = "en-in"
 title = "Cityvora — Explore Cities"
 summaryLength = 28
 enableRobotsTXT = true
-canonifyURLs = true
+canonifyURLs = false
 
 [pagination]
   pagerSize = 12

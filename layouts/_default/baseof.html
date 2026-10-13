@@ -6,21 +6,25 @@
   <title>{{ if .IsHome }}Cityvora — Explore Cities{{ else }}{{ .Title }} | Cityvora{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
   <link rel="canonical" href="{{ .Permalink }}">
-  <meta name="theme-color" content="#07090d">
+  <meta name="theme-color" content="#efeee9">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Title }} | Cityvora">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
   {{ with .Params.image }}<meta property="og:image" content="{{ . }}">{{ end }}
+  {{ if and .IsPage (eq .Section "cities") }}
   <script type="importmap">
     {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/"}}
   </script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2307090d'/><path d='M24 72V28h10v34h28v10z' fill='%2355e6ff'/></svg>">
+  {{ end }}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23151513'/><path d='M24 72V28h10v34h28v10z' fill='%23ffffff'/></svg>">
   {{ $css := resources.Get "css/cityvora.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ $lightCss := resources.Get "css/cityvora-light.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $lightCss.RelPermalink }}">
   {{ block "head" . }}{{ end }}
   {{ $js := resources.Get "js/cityvora.js" | js.Build (dict "targetPath" "js/cityvora.js" "minify" true) | fingerprint }}
   <script src="{{ $js.RelPermalink }}" defer></script>
-  <script type="module" src="{{ "/js/cityvora-3d.js" | relURL }}"></script>
+  {{ if and .IsPage (eq .Section "cities") }}<script type="module" src="{{ "/js/cityvora-3d.js" | relURL }}"></script>{{ end }}
 </head>
 <body><div class="pointer-spotlight" aria-hidden="true"></div><div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="noise"></div>
