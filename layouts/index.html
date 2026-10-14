@@ -6,16 +6,18 @@
     <p>Curated guides for places worth knowing — neighborhoods, food, culture, landmarks and experiences, in one beautiful city atlas.</p>
     <div class="hero-actions"><a class="btn btn-primary" href="#discover">Explore cities <span>↗</span></a><a class="btn btn-ghost" href="{{ "/cities/" | relURL }}">Browse all guides</a></div>
   </div>
-  <div class="hero-art hero-3d" data-city-3d data-city-name="Cityvora">
-    <canvas class="cityvora-3d-canvas" aria-label="Interactive 3D Cityvora atlas"></canvas>
-    <div class="hero-3d-ui"><span>DRAG TO ORBIT</span><span>SCROLL TO ZOOM</span></div>
-    <div class="hero-label label-top">01 / 3D CITY ATLAS</div><div class="hero-label label-bottom">PLACES · PEOPLE · STORIES</div>
+  <div class="hero-art hero-ui-loop" role="group" aria-label="Cityvora interface motion study">
+    <div class="hero-motion-shell">
+      <video class="hero-motion-video" data-motion-video muted loop playsinline preload="metadata" poster="{{ "/images/cityvora-ui-morph-poster.webp" | relURL }}" aria-label="One interface shape morphs through a button, loader, check, player, scrubber, volume slider, toggle, tabs, chart, command palette, and toast before looping.">
+        <source src="{{ "/video/cityvora-ui-morph.mp4" | relURL }}" type="video/mp4">
+        Your browser does not support the motion preview.
+      </video>
+    </div>
+    <div class="motion-meta"><span>ONE COMPONENT · 12 STATES · 120 BPM</span><button class="motion-sound" type="button" data-motion-sound aria-pressed="false" aria-label="Enable sound">Sound off</button></div>
   </div>
 </section>
 
 <section class="ticker" data-reveal><div>CURATED CITIES</div><span>•</span><div>LOCAL CULTURE</div><span>•</span><div>FOOD &amp; STAYS</div><span>•</span><div>WEEKEND IDEAS</div><span>•</span><div>CURATED CITIES</div></section>
-
-{{ partial "showreel.html" . }}
 
 <section id="discover" class="section-block" data-reveal>
   <div class="section-head"><div><span class="section-kicker">01 — DISCOVER</span><h2>Go somewhere <em>interesting.</em></h2></div><a href="{{ "/cities/" | relURL }}">View all cities ↗</a></div>
