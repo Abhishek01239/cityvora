@@ -7,6 +7,15 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="theme-color" content="#efeee9">
+  {{ if .IsHome }}
+  <script>
+    try {
+      const introReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const introAlreadySeen = window.sessionStorage.getItem('cityvora-intro-seen') === '1';
+      if (!introReducedMotion && !introAlreadySeen) document.documentElement.classList.add('cv-intro-pending');
+    } catch (_) {}
+  </script>
+  {{ end }}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ .Title }} | Cityvora">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
@@ -26,7 +35,28 @@
   <script src="{{ $js.RelPermalink }}" defer></script>
   {{ if and .IsPage (eq .Section "cities") }}<script type="module" src="{{ "/js/cityvora-3d.js" | relURL }}"></script>{{ end }}
 </head>
-<body><div class="pointer-spotlight" aria-hidden="true"></div><div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
+<body>
+  {{ if .IsHome }}
+  <div class="site-intro" data-site-intro role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="site-intro-title">
+    <div class="site-intro-content">
+      <video class="site-intro-video" data-intro-video muted playsinline preload="metadata" poster="{{ "/images/cityvora-ui-morph-poster.webp" | relURL }}" aria-label="A single interface shape morphs through twelve states, then the Cityvora home page appears.">
+        <source src="{{ "/video/cityvora-ui-morph.mp4" | relURL }}" type="video/mp4">
+      </video>
+      <div class="site-intro-controls">
+        <div class="site-intro-copy">
+          <p class="site-intro-title" id="site-intro-title">Cityvora in motion.</p>
+          <span>ONE SHAPE · 12 STATES · 120 BPM</span>
+        </div>
+        <div class="site-intro-actions">
+          <button class="intro-control" type="button" data-intro-sound aria-pressed="false" aria-label="Enable sound">Sound off</button>
+          <button class="intro-control intro-skip" type="button" data-skip-intro>Skip intro ↗</button>
+          <button class="intro-control" type="button" data-intro-retry hidden>Play intro</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  <div class="pointer-spotlight" aria-hidden="true"></div><div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <div class="noise"></div>
   <header class="site-header" data-reveal>
     <a class="brand" href="{{ "/" | relURL }}" aria-label="Cityvora home"><span>City</span><b>vora</b></a>

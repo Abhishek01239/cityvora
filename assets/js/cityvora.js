@@ -2,26 +2,124 @@
   const root = document.documentElement;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // First-visit homepage intro: complete the motion study, then release the page.
+  const intro = document.querySelector('[data-site-intro]');
+  if (intro && root.classList.contains('cv-intro-pending')) {
+    const introVideo = intro.querySelector('[data-intro-video]');
+    const skipButton = intro.querySelector('[data-skip-intro]');
+    const retryButton = intro.querySelector('[data-intro-retry]');
+    const introSound = intro.querySelector('[data-intro-sound]');
+    const pageParts = [...document.querySelectorAll('body > header, body > main, body > footer')];
+    let finished = false;
+    let removed = false;
+
+    intro.removeAttribute('aria-hidden');
+    pageParts.forEach(part => { part.inert = true; });
+
+    const cleanupIntro = () => {
+      if (removed) return;
+      removed = true;
+      root.classList.remove('cv-intro-leaving');
+      intro.remove();
+      pageParts.forEach(part => { part.inert = false; });
+      window.dispatchEvent(new CustomEvent('cityvora:intro-finished', {
+        detail: { soundEnabled: introVideo ? !introVideo.muted : false }
+      }));
+    };
+
+    const onIntroKeydown = event => {
+      if (event.key === 'Escape') finishIntro();
+    };
+
+    const finishIntro = () => {
+      if (finished) return;
+      finished = true;
+      window.removeEventListener('keydown', onIntroKeydown);
+      try { window.sessionStorage.setItem('cityvora-intro-seen', '1'); } catch (_) {}
+      if (introVideo) introVideo.pause();
+      root.classList.add('cv-intro-leaving');
+      root.classList.remove('cv-intro-pending');
+      intro.addEventListener('transitionend', event => {
+        if (event.target === intro && event.propertyName === 'opacity') cleanupIntro();
+      }, { once: true });
+      window.setTimeout(cleanupIntro, 750);
+    };
+
+    window.addEventListener('keydown', onIntroKeydown);
+    if (skipButton) skipButton.addEventListener('click', finishIntro);
+    if (introSound && introVideo) {
+      introSound.addEventListener('click', () => {
+        introVideo.muted = !introVideo.muted;
+        const enabled = !introVideo.muted;
+        introSound.textContent = enabled ? 'Sound on' : 'Sound off';
+        introSound.setAttribute('aria-pressed', String(enabled));
+        introSound.setAttribute('aria-label', enabled ? 'Mute sound' : 'Enable sound');
+      });
+    }
+    if (retryButton && introVideo) {
+      retryButton.addEventListener('click', async () => {
+        try {
+          await introVideo.play();
+          retryButton.hidden = true;
+        } catch (_) {}
+      });
+    }
+    if (introVideo) {
+      introVideo.addEventListener('ended', finishIntro, { once: true });
+      introVideo.addEventListener('error', finishIntro, { once: true });
+      if (introVideo.error) finishIntro();
+      else {
+        try {
+          const playback = introVideo.play();
+          if (playback && typeof playback.catch === 'function') playback.catch(() => {
+            if (!finished && retryButton) retryButton.hidden = false;
+          });
+        } catch (_) {
+          if (retryButton) retryButton.hidden = false;
+        }
+      }
+      if (skipButton) requestAnimationFrame(() => skipButton.focus({ preventScroll: true }));
+    } else finishIntro();
+  }
+
   // The homepage loop starts silently only when motion is allowed; sound is opt-in.
   const motionVideo = document.querySelector('[data-motion-video]');
   const motionSound = document.querySelector('[data-motion-sound]');
   if (motionVideo && motionSound) {
-    if (!reduced) {
-      const playback = motionVideo.play();
-      if (playback && typeof playback.catch === 'function') playback.catch(() => {});
-    }
-    motionSound.addEventListener('click', async () => {
-      motionVideo.muted = !motionVideo.muted;
+    const updateMotionSound = () => {
       const enabled = !motionVideo.muted;
       motionSound.textContent = enabled ? 'Sound on' : 'Sound off';
       motionSound.setAttribute('aria-pressed', String(enabled));
       motionSound.setAttribute('aria-label', enabled ? 'Mute sound' : 'Enable sound');
+    };
+    const startMotion = event => {
+      if (event && event.detail && event.detail.soundEnabled) {
+        motionVideo.muted = false;
+        updateMotionSound();
+      }
+      const playback = motionVideo.play();
+      if (playback && typeof playback.catch === 'function') playback.catch(() => {
+        if (!motionVideo.muted) {
+          motionVideo.muted = true;
+          updateMotionSound();
+          const retry = motionVideo.play();
+          if (retry && typeof retry.catch === 'function') retry.catch(() => {});
+        }
+      });
+    };
+    if (!reduced) {
+      if (root.classList.contains('cv-intro-pending')) {
+        window.addEventListener('cityvora:intro-finished', startMotion, { once: true });
+      } else startMotion();
+    }
+    motionSound.addEventListener('click', async () => {
+      motionVideo.muted = !motionVideo.muted;
+      const enabled = !motionVideo.muted;
+      updateMotionSound();
       if (enabled && motionVideo.paused) {
         try { await motionVideo.play(); } catch (_) {
           motionVideo.muted = true;
-          motionSound.textContent = 'Sound off';
-          motionSound.setAttribute('aria-pressed', 'false');
-          motionSound.setAttribute('aria-label', 'Enable sound');
+          updateMotionSound();
         }
       }
     });
