@@ -1,83 +1,78 @@
 ---
-title: "Lisbon City Guide: Trams, Pastéis de Nata, Fado and Practical Travel Tips"
-description: "A practical Lisbon guide covering Alfama, Belém, Tram 28, pastéis de nata, fado, neighborhoods, food, stay areas, daily budgets and a simple itinerary."
-date: 2026-10-13T09:30:00+05:30
+title: "Lisbon City Guide: Landmarks, Neighborhoods, Food and Practical Tips"
+description: "A practical Lisbon guide covering Alfama, Belém Tower, Jerónimos Monastery, local pastéis de nata and bacalhau, stay areas, budgets and seasonal advice."
+date: 2026-10-20T09:30:00+05:30
 draft: false
 country: "Portugal"
-state: "Lisbon District"
-region: "Lisboa e Vale do Tejo"
+state: "Lisbon"
+region: "Europe"
 currency: "Euro (EUR)"
-best_time: "April to June or September to October"
-image: "https://commons.wikimedia.org/wiki/Special:FilePath/Alfama_Lisboa_9.JPG?width=1600"
-image_alt: "Yellow Tram 28 winding through the Alfama neighborhood in Lisbon"
-image_credit: "Wikimedia Commons"
+best_time: "April to June and September to October"
+image: "https://res.cloudinary.com/muc9b5sj/image/upload/v1/cityvora/cities/lisbon-guide-featured.jpg"
+image_alt: "Lisbon skyline with Alfama neighborhood, red-tiled roofs and the 25 de Abril Bridge over the Tagus River at golden hour"
+image_credit: "Generated image via Grok Imagine, hosted on Cloudinary"
 tags:
   - Lisbon
   - Portugal
+  - Europe
   - City Guide
   - Travel
-  - Food
-  - Architecture
+  - Landmarks
 ---
 
-Lisbon spreads across seven hills on the north bank of the Tagus River, with pastel buildings, azulejo tilework, yellow trams and a maritime history that still shapes its character. The city is compact enough for a focused three- to four-day visit covering the historic core, Belém and a day trip, while remaining more affordable than many other Western European capitals.
+Lisbon rises across seven hills above the Tagus River, blending Moorish-era lanes, Pombaline grids rebuilt after the 1755 earthquake, and Age of Discovery monuments. A three- to five-day visit covers the core neighborhoods and Belém while leaving time for viewpoints and local meals.
 
 ## Places to Explore
 
-- **Alfama and Tram 28** — The old Moorish quarter with narrow lanes, miradouros (viewpoints) and the iconic yellow Tram 28. Ride early or late to reduce crowds; the route passes through Graça, Alfama and Estrela.
-- **Castelo de São Jorge** — Hilltop castle with panoramic views over the city and river. Entry typically €10–15; open roughly 9:00–18:00 (check current hours). Arrive early for better light and fewer visitors.
-- **Belém district** — Home to the Jerónimos Monastery (Manueline architecture, UNESCO site; entry around €10) and the Belém Tower. Both celebrate the Age of Discovery. Pastéis de Belém bakery is nearby.
-- **Praça do Comércio and Baixa** — Grand riverside square and the grid of Pombaline streets rebuilt after the 1755 earthquake. Easy base for walking to Chiado and Bairro Alto.
-- **Miradouros** — Viewpoints such as Senhora do Monte, Santa Luzia and Portas do Sol offer classic Lisbon panoramas, especially at sunset.
+- **Alfama** — The oldest neighborhood, largely surviving the 1755 earthquake. Narrow stairways, azulejo-tiled facades, laundry lines and the Sé Cathedral. Climb toward São Jorge Castle for views. Early morning is quieter. Fado can be heard in small venues in the evenings.
+- **São Jorge Castle (Castelo de São Jorge)** — Moorish fortress on the highest hill of the historic centre, with ramparts overlooking the river and city. Entry is paid; book or go early.
+- **Belém district** — Home to the UNESCO-listed Belém Tower and Jerónimos Monastery, both linked to the Age of Discovery. The original Pastéis de Belém bakery is nearby for the classic custard tart.
+- **Praça do Comércio and Baixa** — Grand riverside square rebuilt after 1755, with arcades and the Rua Augusta Arch. Flat and central, useful as a starting point. Connects toward Rossio and Chiado.
+- **Chiado and Bairro Alto** — Chiado for bookshops (including the historic Bertrand), cafés and elegant streets; Bairro Alto above it for evening bars. Tram 28 (when running) passes through several historic areas; check current service.
+- **Miradouros (viewpoints)** — Senhora do Monte, Santa Luzia and others offer panoramic views over the Tagus and roofs. Free and rewarding at sunset.
 
 ## Food & Local Cuisine
 
-Portuguese cooking is hearty, seafood-focused and excellent value.
+Lisbon’s food is affordable and distinctive, especially outside pure tourist strips.
 
-- **Pastéis de nata** — Custard tarts. The original is at Pastéis de Belém (recipe since 1837); eat them warm with cinnamon. Excellent versions also exist in Chiado (e.g., Manteigaria) with shorter queues.
-- **Bacalhau** — Salt cod prepared in many ways. Bacalhau à Brás (shredded cod with eggs, onions and matchstick potatoes) is a reliable starting point.
-- **Seafood** — Grilled fish, sardines (especially in season), gambas and dishes like arroz de marisco. Cervejaria Ramiro is a well-known seafood hall.
-- **Everyday options** — Prato do dia (daily special, often €8–12 including drink and coffee) at traditional tascas, bifanas (pork sandwiches) and ginjinha (cherry liqueur).
+- **Pastéis de nata** — Custard tarts, best eaten warm with cinnamon. Pastéis de Belém is the historic reference; many neighborhood pastelarias serve excellent versions.
+- **Bacalhau** — Salt cod prepared in many ways (locals cite dozens of recipes). Try bacalhau à Brás (shredded with eggs and matchstick potatoes) or simpler grilled versions.
+- **Other classics** — Grilled sardines (especially in warmer months), polvo (octopus), and the prato do dia (daily special) at tascas, often €8–12 including bread and a drink.
+- **Coffee culture** — A bica is a small espresso, commonly drunk standing at the counter. Couvert (bread, olives, cheese) may be brought and charged only if eaten.
 
-Lunch menus are common and affordable. Many smaller places prefer cash.
+Cards are widely accepted; small cash is useful for markets or tips.
 
 ## Where to Stay
 
-- **Alfama / Graça** — Atmospheric and walkable to viewpoints; steeper streets.
-- **Baixa / Chiado** — Central, flatter, strong public-transport links and evening energy.
-- **Bairro Alto** — Lively at night; convenient for fado and bars, quieter by day.
-- **Belém or riverside areas** — Quieter if you prioritise the monuments and waterfront.
+- **Baixa / Chiado** — Central, flatter, close to transport and major sights. Convenient for first visits.
+- **Alfama / Graça** — Atmospheric, hilly, closer to the castle and viewpoints. More stairs and character.
+- **Bairro Alto / Príncipe Real** — Good for evening atmosphere and dining; some noise at night.
+- **Belém or farther riverside** — Quieter, near monuments and the river, with tram or train links.
 
-Business hotels and guesthouses offer solid mid-range value outside peak summer.
-
-**Hotel booking:** Search Lisbon hotels on Booking.com
+Book ahead for June (Santo António festival) and July–August, when rates rise.
 
 ## Trip Budget
 
-Approximate **per person, per day**, excluding international flights:
+Approximate **per person, per day**, excluding international flights (prices vary by season; confirm current rates):
 
-- **Budget:** €40–70 — hostel or budget room, market/tasca meals, metro/tram day pass or walk.
-- **Mid-range:** €80–140 — comfortable hotel, mixed restaurant meals, paid sights and local transport.
-- **Comfort/premium:** €180+ — higher-end hotel, seafood dinners, taxis or private experiences.
+- **Budget:** €60–90 — hostel, tasca meals, public transport day pass, one paid sight.
+- **Mid-range:** €110–180 — mid-range hotel or apartment, mixed meals, a couple of attractions or a day trip.
+- **Comfort:** €200+ — boutique hotel, restaurant dining and private experiences.
 
-A 24-hour public-transport ticket is around €7. Single metro/tram rides are about €1.90. The Lisboa Card can pay for itself with several paid sights plus transport.
+The metro, trams and buses are efficient; a rechargeable card (Navegante or Viva Viagem) is practical. Uber or Bolt work for hills. The Lisboa Card can save money if visiting several paid sites.
 
-## Three-Day Plan
+## Practical Tips
 
-**Day 1:** Alfama morning walk and Tram 28 → Castelo de São Jorge → miradouro sunset → optional fado in the evening.
+- Best balance of weather and crowds is April–June and September–October. Summers are hot on the hills; winters are mild but rainier.
+- Book timed entry for Jerónimos Monastery and Belém Tower in peak periods. Check whether historic funiculars are operating.
+- Tap water is safe. English is widely spoken in tourist areas; Portuguese is the local language.
+- Wear comfortable shoes with grip—cobblestones and hills are constant. Keep bags closed in crowded squares.
+- Dinner starts later (often after 8 pm). Many smaller restaurants close one day a week.
 
-**Day 2:** Belém (Jerónimos Monastery and Pastéis de Belém) → riverside walk or ferry → Chiado/Baixa evening.
+## Conclusion
 
-**Day 3:** Optional Sintra day trip or deeper neighborhood time (Príncipe Real, LX Factory) plus a final seafood meal.
-
-## Before You Go
-
-- Best weather and fewer extreme crowds: April–June and September–October. Summer is hot on the hills and busier.
-- Cobblestone streets (calçada) can be slippery; wear shoes with good grip.
-- Book popular sights (Jerónimos, castle, Sintra) online in peak periods.
-- English is widely spoken in tourist areas; Portuguese is the local language.
-- Tap water is safe. Tipping is modest and optional.
+Lisbon rewards unhurried walking, neighborhood viewpoints and simple local meals as much as its grand monuments. Start with Alfama and Baixa, add Belém for the Age of Discovery sites, and leave room for a pastel de nata and a miradouro at sunset. With reliable public transport, varied lodging and good value outside peak summer, the city is straightforward to explore while remaining richly layered.
 
 ## Image Credit
 
-Hero image: Yellow Tram 28 in Alfama, Lisbon, via Wikimedia Commons.
+Hero image generated specifically for this Lisbon guide and hosted on Cloudinary.
