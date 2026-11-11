@@ -5,26 +5,52 @@
 {{ $foodMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "best food in %s" $mapsCity) | urlquery) }}
 {{ $hotelMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "hotels in %s" $mapsCity) | urlquery) }}
 {{ $placesMap := printf "https://www.google.com/maps/search/?api=1&query=%s" ((printf "tourist attractions in %s" $mapsCity) | urlquery) }}
-<article class="article-page" data-reveal>
-  <section class="city-3d-banner" data-city-3d data-city-name="{{ $city }}">
-    <canvas class="cityvora-3d-canvas" aria-label="Interactive 3D {{ $city }} city visualization"></canvas>
-    <div class="city-3d-overlay"><span class="section-kicker">3D CITY VIEW</span><strong>{{ $city }}</strong><small>Drag to orbit · wheel to zoom</small></div>
+<article class="article-page city-article" data-reveal>
+  <section class="city-article-hero" aria-labelledby="city-article-title">
+    <div class="city-article-copy">
+      <div class="city-article-kicker"><span>{{ .Params.region | default "CITY GUIDE" }}</span><i aria-hidden="true"></i><span>{{ .Params.country | default "INDIA" }}</span></div>
+      <p class="city-article-overline">CITYVORA ATLAS <span> / </span> FIELD GUIDE</p>
+      <h1 id="city-article-title">{{ .Title }}</h1>
+      <p class="city-article-description">{{ .Description }}</p>
+      <div class="city-article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span class="city-meta-divider" aria-hidden="true"></span><span>{{ .ReadingTime }} min read</span></div>
+      <div class="city-hero-actions"><a class="city-hero-cta" href="{{ $cityMap }}" target="_blank" rel="noopener">Explore {{ $city }} <span aria-hidden="true">↗</span></a><span class="city-hero-note">A field guide to the city</span></div>
+    </div>
+    <div class="city-3d-wrap">
+      <div class="city-3d-banner" data-city-3d data-city-name="{{ $city }}" data-city-state="{{ .Params.state | default "" }}" role="group" aria-label="Illustrative 3D cityscape for {{ $city }}">
+        <canvas class="cityvora-3d-canvas" tabindex="0" aria-label="Illustrative 3D cityscape for {{ $city }}, not to scale. Drag or use arrow keys to rotate; scroll or use plus and minus to zoom."></canvas>
+        <div class="city-scene-hud" aria-hidden="true"><span><i></i> CITY STUDY</span><span>ABSTRACT · NOT TO SCALE</span></div>
+        <div class="city-3d-overlay" aria-hidden="true"><span>AN EXPLORABLE IMPRESSION</span><strong>{{ $city }}</strong><small>Illustrative model · not a geographic map</small></div>
+        <div class="city-scene-controls" aria-hidden="true"><span>DRAG TO ROTATE</span><span>SCROLL / + − TO ZOOM</span></div>
+        {{ with .Params.image }}
+        <figure class="city-photo-card" data-tilt>
+          <div class="city-photo-image" role="img" aria-label="{{ $.Params.image_alt | default $city }}" style="background-image:url('{{ . }}')"></div>
+          <figcaption><span>FIELD PHOTO</span><small>{{ $.Params.image_credit | default "Cityvora" }}</small></figcaption>
+        </figure>
+        {{ end }}
+      </div>
+      <p class="city-scene-caption"><span aria-hidden="true">✳</span> A generative city study — illustrative, not a map.</p>
+    </div>
   </section>
-  <div class="article-progress" data-article-progress aria-hidden="true"></div><header class="article-head"><span class="section-kicker">{{ .Params.region | default "CITY GUIDE" }} · {{ .Params.country | default "INDIA" }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p><div class="article-meta"><span>Updated {{ .Date.Format "02 Jan 2006" }}</span><span>·</span><span>{{ .ReadingTime }} min read</span></div></header>
-  {{ with .Params.image }}<div class="article-hero" style="background-image:url('{{ . }}')"></div>{{ with $.Params.image_credit }}<p class="image-credit">{{ . }}</p>{{ end }}{{ end }}
+
+  <div class="article-progress" data-article-progress aria-hidden="true"></div>
+
   <section class="location-explorer" data-reveal>
     <div class="location-head">
-      <div><span class="section-kicker">CITY MAP</span><h2>Find it on the <em>map.</em></h2><p>Open the exact city, food and hotel searches directly in Google Maps.</p></div>
+      <div><span class="section-kicker">THE CITY, WITHIN REACH</span><h2>Make your way around <em>{{ $city }}.</em></h2><p>Open city, food, stay and attraction searches in Google Maps.</p></div>
       <a class="location-main-link" href="{{ $cityMap }}" target="_blank" rel="noopener">Open city map ↗</a>
     </div>
     <div class="location-grid">
-      <a class="location-card location-city" href="{{ $cityMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">CITY</span><strong>{{ $city }}</strong><small>{{ $mapsCity }}</small></div><b>↗</b></a>
-      <a class="location-card" href="{{ $foodMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">FOOD</span><strong>Food near {{ $city }}</strong><small>Restaurants, cafés and local food spots</small></div><b>↗</b></a>
-      <a class="location-card" href="{{ $hotelMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">HOTELS</span><strong>Stay in {{ $city }}</strong><small>Hotels and stays around the city</small></div><b>↗</b></a>
-      <a class="location-card" href="{{ $placesMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">PLACES</span><strong>Things to do in {{ $city }}</strong><small>Landmarks, attractions and experiences</small></div><b>↗</b></a>
+      <a class="location-card location-city interactive-card" data-tilt href="{{ $cityMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">CITY</span><strong>{{ $city }}</strong><small>{{ $mapsCity }}</small></div><b aria-hidden="true">↗</b></a>
+      <a class="location-card interactive-card" data-tilt href="{{ $foodMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">FOOD</span><strong>Food near {{ $city }}</strong><small>Restaurants, cafés and local food spots</small></div><b aria-hidden="true">↗</b></a>
+      <a class="location-card interactive-card" data-tilt href="{{ $hotelMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">HOTELS</span><strong>Stay in {{ $city }}</strong><small>Hotels and stays around the city</small></div><b aria-hidden="true">↗</b></a>
+      <a class="location-card interactive-card" data-tilt href="{{ $placesMap }}" target="_blank" rel="noopener"><span class="location-icon">⌖</span><div><span class="location-type">PLACES</span><strong>Things to do in {{ $city }}</strong><small>Landmarks, attractions and experiences</small></div><b aria-hidden="true">↗</b></a>
     </div>
   </section>
-  <div class="article-layout" data-reveal><aside><div class="fact-card interactive-card" data-tilt><span class="section-kicker">QUICK FACTS</span><dl>{{ with $.Params.state }}<dt>State</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.currency }}<dt>Currency</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.best_time }}<dt>Best time</dt><dd>{{ . }}</dd>{{ end }}</dl></div></aside><div class="prose">{{ .Content }}</div></div>
+
+  <div class="article-layout" data-reveal>
+    <aside><div class="fact-card interactive-card" data-tilt><span class="section-kicker">QUICK FACTS</span><dl>{{ with $.Params.state }}<dt>State</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.currency }}<dt>Currency</dt><dd>{{ . }}</dd>{{ end }}{{ with $.Params.best_time }}<dt>Best time</dt><dd>{{ . }}</dd>{{ end }}</dl></div></aside>
+    <div class="prose">{{ .Content }}</div>
+  </div>
   {{ with .Params.tags }}<footer class="article-tags">{{ range . }}<span>#{{ . }}</span>{{ end }}</footer>{{ end }}
 </article>
 {{ end }}

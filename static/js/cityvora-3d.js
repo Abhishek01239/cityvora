@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function seedFrom(text) {
   let seed = 0;
@@ -10,145 +10,230 @@ function seedFrom(text) {
 }
 
 function random(seed) {
-  let x = seed >>> 0;
+  let value = seed >>> 0;
   return () => {
-    x ^= x << 13; x ^= x >>> 17; x ^= x << 5;
-    return ((x >>> 0) % 10000) / 10000;
+    value ^= value << 13;
+    value ^= value >>> 17;
+    value ^= value << 5;
+    return (value >>> 0) / 4294967296;
   };
 }
 
-function markerPosition(lat, lon, radius) {
-  const phi = (90 - lat) * Math.PI / 180;
-  const theta = (lon + 180) * Math.PI / 180;
-  return new THREE.Vector3(
-    -radius * Math.sin(phi) * Math.cos(theta),
-    radius * Math.cos(phi),
-    radius * Math.sin(phi) * Math.sin(theta)
-  );
-}
-
-function createScene(host) {
+function makeCityStudy(host) {
   const canvas = host.querySelector('.cityvora-3d-canvas');
   if (!canvas) return;
 
-  const width = host.clientWidth || 600;
-  const height = host.clientHeight || 400;
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 100);
-  camera.position.set(0, 0.15, 4.7);
+  const width = Math.max(1, host.clientWidth);
+  const height = Math.max(1, host.clientHeight);
+  const camera = new THREE.PerspectiveCamera(34, width / height, 0.1, 100);
+  camera.position.set(4.5, 5.2, 6.1);
+  camera.lookAt(0, 0, 0);
 
-  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.7));
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.setSize(width, height, false);
+  renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.12;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  scene.add(new THREE.HemisphereLight(0xfffdf7, 0xaaa79e, 2.0));
+  const keyLight = new THREE.DirectionalLight(0xffffff, 3.1);
+  keyLight.position.set(-3.5, 7, 4.5);
+  keyLight.castShadow = true;
+  keyLight.shadow.mapSize.set(1024, 1024);
+  keyLight.shadow.camera.left = -5;
+  keyLight.shadow.camera.right = 5;
+  keyLight.shadow.camera.top = 5;
+  keyLight.shadow.camera.bottom = -5;
+  keyLight.shadow.bias = -0.0005;
+  scene.add(keyLight);
 
   const controls = new OrbitControls(camera, canvas);
-  controls.enableDamping = true;
+  controls.target.set(0, 0.08, 0);
+  controls.enableDamping = !reducedMotion;
+  controls.dampingFactor = 0.075;
   controls.enablePan = false;
-  controls.minDistance = 3.2;
-  controls.maxDistance = 6.2;
-  controls.autoRotate = !reduced;
-  controls.autoRotateSpeed = 0.38;
+  controls.minDistance = 5.2;
+  controls.maxDistance = 9.2;
+  controls.minPolarAngle = 0.48;
+  controls.maxPolarAngle = 1.28;
+  controls.autoRotate = !reducedMotion;
+  controls.autoRotateSpeed = 0.24;
+  controls.update();
 
-  const group = new THREE.Group();
-  scene.add(group);
+  const cityName = host.dataset.cityName || 'Cityvora';
+  const rng = random(seedFrom(`${cityName}|${host.dataset.cityState || ''}`));
+  const model = new THREE.Group();
+  model.rotation.y = (rng() - 0.5) * 0.34;
+  scene.add(model);
 
-  const core = new THREE.Mesh(
-    new THREE.SphereGeometry(1.35, 48, 48),
-    new THREE.MeshBasicMaterial({ color: 0x0a141b, transparent: true, opacity: 0.92 })
-  );
-  group.add(core);
+  const sideMaterial = new THREE.MeshStandardMaterial({ color: 0x292925, roughness: 0.52, metalness: 0.06 });
+  const topMaterial = new THREE.MeshStandardMaterial({ color: 0xe9e7df, roughness: 0.88 });
+  const roadMaterial = new THREE.MeshStandardMaterial({ color: 0xd0cec5, roughness: 0.95 });
+  const buildingMaterials = [
+    new THREE.MeshStandardMaterial({ color: 0xf8f7f2, roughness: 0.68 }),
+    new THREE.MeshStandardMaterial({ color: 0xc9c7bf, roughness: 0.75 }),
+    new THREE.MeshStandardMaterial({ color: 0x77766f, roughness: 0.65 }),
+    new THREE.MeshStandardMaterial({ color: 0x33332f, roughness: 0.55 }),
+    new THREE.MeshStandardMaterial({ color: 0xb66b4d, roughness: 0.62 })
+  ];
 
-  const wire = new THREE.Mesh(
-    new THREE.SphereGeometry(1.39, 32, 24),
-    new THREE.MeshBasicMaterial({ color: 0x55e6ff, wireframe: true, transparent: true, opacity: 0.16 })
-  );
-  group.add(wire);
+  const base = new THREE.Mesh(new THREE.BoxGeometry(4.55, 0.24, 3.22), sideMaterial);
+  base.position.y = -0.16;
+  base.castShadow = true;
+  base.receiveShadow = true;
+  model.add(base);
 
-  const inner = new THREE.Mesh(
-    new THREE.SphereGeometry(1.02, 32, 32),
-    new THREE.MeshBasicMaterial({ color: 0x55e6ff, transparent: true, opacity: 0.045 })
-  );
-  group.add(inner);
+  const ground = new THREE.Mesh(new THREE.PlaneGeometry(4.48, 3.15), topMaterial);
+  ground.rotation.x = -Math.PI / 2;
+  ground.position.y = -0.037;
+  ground.receiveShadow = true;
+  model.add(ground);
 
-  const ringMaterial = new THREE.MeshBasicMaterial({ color: 0x55e6ff, transparent: true, opacity: 0.22 });
-  [1.72, 2.0].forEach((radius, index) => {
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(radius, 0.006, 8, 160), ringMaterial);
-    ring.rotation.x = index ? Math.PI / 2.6 : Math.PI / 3.2;
-    ring.rotation.z = index ? -0.4 : 0.35;
-    group.add(ring);
-  });
+  const rows = 7;
+  const columns = 9;
+  const spacingX = 0.45;
+  const spacingZ = 0.39;
+  const groundY = -0.018;
 
-  const name = host.dataset.cityName || 'Cityvora';
-  const rng = random(seedFrom(name));
-  const markerGroup = new THREE.Group();
-  const points = [];
-  const baseLat = 20 + rng() * 30;
-  const baseLon = 55 + rng() * 65;
-
-  for (let i = 0; i < 18; i++) {
-    const lat = Math.max(-70, Math.min(70, baseLat + (rng() - 0.5) * 45));
-    const lon = baseLon + (rng() - 0.5) * 70;
-    const p = markerPosition(lat, lon, 1.405);
-    const dot = new THREE.Mesh(
-      new THREE.SphereGeometry(i === 0 ? 0.045 : 0.024, 12, 12),
-      new THREE.MeshBasicMaterial({ color: i === 0 ? 0xffffff : 0x55e6ff })
-    );
-    dot.position.copy(p);
-    markerGroup.add(dot);
-    points.push(p.clone());
+  for (let column = 0; column < columns - 1; column++) {
+    const x = (column + 0.5 - (columns - 1) / 2) * spacingX;
+    const seam = new THREE.Mesh(new THREE.BoxGeometry(0.018, 0.008, 2.72), roadMaterial);
+    seam.position.set(x, groundY, 0);
+    model.add(seam);
   }
-  group.add(markerGroup);
-
-  const starGeometry = new THREE.BufferGeometry();
-  const starPositions = [];
-  for (let i = 0; i < 260; i++) {
-    const r = 4.2 + rng() * 3.5;
-    const a = rng() * Math.PI * 2;
-    const b = Math.acos(2 * rng() - 1);
-    starPositions.push(r * Math.sin(b) * Math.cos(a), r * Math.cos(b), r * Math.sin(b) * Math.sin(a));
+  for (let row = 0; row < rows - 1; row++) {
+    const z = (row + 0.5 - (rows - 1) / 2) * spacingZ;
+    const seam = new THREE.Mesh(new THREE.BoxGeometry(4.05, 0.008, 0.018), roadMaterial);
+    seam.position.set(0, groundY, z);
+    model.add(seam);
   }
-  starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starPositions, 3));
-  const stars = new THREE.Points(starGeometry, new THREE.PointsMaterial({ color: 0x6e8792, size: 0.012, transparent: true, opacity: 0.7 }));
-  scene.add(stars);
 
-  const ambient = new THREE.AmbientLight(0x8addeb, 1.2);
-  scene.add(ambient);
-  const key = new THREE.PointLight(0x55e6ff, 8, 10);
-  key.position.set(3, 2, 4);
-  scene.add(key);
+  for (let row = 0; row < rows; row++) {
+    for (let column = 0; column < columns; column++) {
+      if (rng() < 0.15) continue;
+      const width = 0.20 + rng() * 0.10;
+      const depth = 0.17 + rng() * 0.09;
+      const landmark = rng() > 0.88;
+      const buildingHeight = landmark ? 0.5 + rng() * 0.28 : 0.12 + Math.pow(rng(), 1.45) * 0.42;
+      const x = (column - (columns - 1) / 2) * spacingX + (rng() - 0.5) * 0.055;
+      const z = (row - (rows - 1) / 2) * spacingZ + (rng() - 0.5) * 0.045;
+      const materialIndex = rng() > 0.88 ? 4 : Math.floor(rng() * 4);
+      const geometry = landmark && rng() > 0.5
+        ? new THREE.CylinderGeometry(width * 0.30, width * 0.54, buildingHeight, 7)
+        : new THREE.BoxGeometry(width, buildingHeight, depth);
+      const building = new THREE.Mesh(geometry, buildingMaterials[materialIndex]);
+      building.position.set(x, groundY + buildingHeight / 2, z);
+      building.castShadow = true;
+      building.receiveShadow = true;
+      model.add(building);
 
-  const resize = () => {
-    const w = host.clientWidth || 600;
-    const h = host.clientHeight || 400;
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-    renderer.setSize(w, h, false);
-  };
-  window.addEventListener('resize', resize, { passive: true });
+      if (landmark && rng() > 0.5) {
+        const roof = new THREE.Mesh(new THREE.BoxGeometry(width * 0.54, 0.07, depth * 0.54), buildingMaterials[3]);
+        roof.position.set(x, groundY + buildingHeight + 0.035, z);
+        roof.castShadow = true;
+        model.add(roof);
+      }
+    }
+  }
 
-  let t = 0;
-  renderer.setAnimationLoop(() => {
-    t += 0.006;
-    markerGroup.rotation.y = Math.sin(t * 0.45) * 0.025;
-    stars.rotation.y += reduced ? 0.00005 : 0.00018;
-    group.rotation.z = Math.sin(t * 0.22) * 0.018;
+  const render = () => renderer.render(scene, camera);
+  const animate = () => {
     controls.update();
-    renderer.render(scene, camera);
+    render();
+  };
+  let sceneIsVisible = false;
+  let visibilityObserver = null;
+  const syncAnimation = () => {
+    renderer.setAnimationLoop(!reducedMotion && sceneIsVisible && !document.hidden ? animate : null);
+  };
+  if (reducedMotion) {
+    controls.addEventListener('change', render);
+    render();
+  } else if ('IntersectionObserver' in window) {
+    visibilityObserver = new IntersectionObserver(entries => {
+      sceneIsVisible = entries.some(entry => entry.isIntersecting);
+      syncAnimation();
+    }, { threshold: 0 });
+    visibilityObserver.observe(host);
+    document.addEventListener('visibilitychange', syncAnimation);
+    syncAnimation();
+  } else {
+    renderer.setAnimationLoop(animate);
+  }
+
+  const resizeObserver = new ResizeObserver(() => {
+    const nextWidth = Math.max(1, host.clientWidth);
+    const nextHeight = Math.max(1, host.clientHeight);
+    camera.aspect = nextWidth / nextHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(nextWidth, nextHeight, false);
+    render();
   });
+  resizeObserver.observe(host);
+
+  canvas.addEventListener('keydown', event => {
+    const step = 0.11;
+    if (event.key === 'ArrowLeft') model.rotation.y -= step;
+    else if (event.key === 'ArrowRight') model.rotation.y += step;
+    else if (event.key === 'ArrowUp') model.rotation.x = Math.max(-0.28, model.rotation.x - step);
+    else if (event.key === 'ArrowDown') model.rotation.x = Math.min(0.28, model.rotation.x + step);
+    else if (event.key === '+' || event.key === '=') {
+      const offset = camera.position.clone().sub(controls.target).multiplyScalar(0.92);
+      camera.position.copy(controls.target).add(offset.clampLength(controls.minDistance, controls.maxDistance));
+    } else if (event.key === '-' || event.key === '_') {
+      const offset = camera.position.clone().sub(controls.target).multiplyScalar(1.08);
+      camera.position.copy(controls.target).add(offset.clampLength(controls.minDistance, controls.maxDistance));
+    } else return;
+    event.preventDefault();
+    controls.update();
+    render();
+  });
+
+  host.classList.add('is-rendered');
+  window.addEventListener('pagehide', () => {
+    resizeObserver.disconnect();
+    visibilityObserver?.disconnect();
+    document.removeEventListener('visibilitychange', syncAnimation);
+    controls.dispose();
+    renderer.setAnimationLoop(null);
+    renderer.dispose();
+  }, { once: true });
 }
 
 function boot3D() {
-  document.querySelectorAll('[data-city-3d]').forEach(host => {
-    try { createScene(host); } catch (error) {
+  const hosts = [...document.querySelectorAll('[data-city-3d]')];
+  if (!('WebGL2RenderingContext' in window)) {
+    hosts.forEach(host => host.classList.add('three-fallback'));
+    return;
+  }
+
+  const initialize = host => {
+    if (host.dataset.cityReady === 'true') return;
+    host.dataset.cityReady = 'true';
+    try {
+      makeCityStudy(host);
+    } catch (error) {
       host.classList.add('three-fallback');
-      console.warn('Cityvora 3D scene unavailable:', error);
+      console.warn('Cityvora city study unavailable:', error);
     }
-  });
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          initialize(entry.target);
+        }
+      });
+    }, { rootMargin: '160px' });
+    hosts.forEach(host => observer.observe(host));
+  } else hosts.forEach(initialize);
 }
 
-if (!reduced) {
-  if ('WebGL2RenderingContext' in window) boot3D();
-} else {
-  document.querySelectorAll('[data-city-3d]').forEach(host => host.classList.add('three-reduced'));
-}
+boot3D();
