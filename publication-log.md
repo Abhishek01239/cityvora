@@ -2,6 +2,7 @@
 
 | Timestamp (UTC) | City | Title | Image URL | Article URL | Status |
 |-----------------|------|-------|-----------|-------------|--------|
+| 2026-11-16T03:43:33Z | Vancouver | Vancouver City Guide: Stanley Park, Seawall, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794800613/cityvora/cities/vancouver-guide-featured.jpg | https://cityvora.vercel.app/cities/vancouver/ | Published (awaiting Vercel deploy) |
 | 2026-11-15T03:44:04Z | Kyoto | Kyoto City Guide: Temples, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794714185/cityvora/cities/kyoto-guide-featured.jpg | https://cityvora.vercel.app/cities/kyoto/ | Published (awaiting Vercel deploy) |
 | 2026-11-14T03:43:11Z | Rio de Janeiro | Rio de Janeiro City Guide: Christ the Redeemer, Beaches, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794627791/cityvora/cities/rio-de-janeiro-guide-featured.jpg | https://cityvora.vercel.app/cities/rio-de-janeiro/ | Published (awaiting Vercel deploy) |
 | 2026-11-13T03:45:09Z | Cairo | Cairo City Guide: Pyramids, Islamic Cairo, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794541489/cityvora/cities/cairo-guide-featured.jpg | https://cityvora.vercel.app/cities/cairo/ | Published (awaiting Vercel deploy) |
