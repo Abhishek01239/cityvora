@@ -2,6 +2,7 @@
 
 | Timestamp (UTC) | City | Title | Image URL | Article URL | Status |
 |-----------------|------|-------|-----------|-------------|--------|
+| 2026-11-17T03:56:19Z | Athens | Athens City Guide: Acropolis, Plaka, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794887779/cityvora/cities/athens-guide-featured.jpg | https://cityvora.vercel.app/cities/athens/ | Published (awaiting Vercel deploy) |
 | 2026-11-17T03:51:41Z | Bangkok | Bangkok City Guide: Temples, Street Food, Neighborhoods and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794887407/cityvora/cities/bangkok-guide-featured.jpg | https://cityvora.vercel.app/cities/bangkok/ | Published (awaiting Vercel deploy) |
 | 2026-11-16T03:43:33Z | Vancouver | Vancouver City Guide: Stanley Park, Seawall, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794800613/cityvora/cities/vancouver-guide-featured.jpg | https://cityvora.vercel.app/cities/vancouver/ | Published (awaiting Vercel deploy) |
 | 2026-11-15T03:44:04Z | Kyoto | Kyoto City Guide: Temples, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1794714185/cityvora/cities/kyoto-guide-featured.jpg | https://cityvora.vercel.app/cities/kyoto/ | Published (awaiting Vercel deploy) |
