@@ -2,6 +2,7 @@
 
 | Timestamp (UTC) | City | Title | Image URL | Article URL | Status |
 |-----------------|------|-------|-----------|-------------|--------|
+| 2026-11-24T03:44:36Z | Dubai | Dubai City Guide: Burj Khalifa, Marina, Old Town, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795491852/cityvora/cities/dubai-guide-featured.jpg | https://cityvora.vercel.app/cities/dubai/ | Published (awaiting Vercel deploy) |
 | 2026-11-23T03:44:58Z | Mexico City | Mexico City Guide: Zócalo, Centro Histórico, Neighborhoods, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795405466/cityvora/cities/mexico-city-guide-featured.jpg | https://cityvora.vercel.app/cities/mexico-city/ | Published (awaiting Vercel deploy) |
 | 2026-11-22T03:44:58Z | Krakow | Krakow City Guide: Wawel Castle, Main Market Square, Kazimierz, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795319078/cityvora/cities/krakow-guide-featured.jpg | https://cityvora.vercel.app/cities/krakow/ | Published (awaiting Vercel deploy) |
 | 2026-11-21T03:46:41Z | Budapest | Budapest City Guide: Parliament, Thermal Baths, Castle Hill, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795232762/cityvora/cities/budapest-guide-featured.jpg | https://cityvora.vercel.app/cities/budapest/ | Published (awaiting Vercel deploy) |
