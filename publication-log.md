@@ -2,6 +2,7 @@
 
 | Timestamp (UTC) | City | Title | Image URL | Article URL | Status |
 |-----------------|------|-------|-----------|-------------|--------|
+| 2026-11-27T03:44:00Z | Helsinki | Helsinki City Guide: Cathedral, Suomenlinna, Saunas, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795751069/cityvora/cities/helsinki-guide-featured.jpg | https://cityvora.vercel.app/cities/helsinki/ | Published (awaiting Vercel deploy) |
 | 2026-11-26T03:43:00Z | Lisbon | Lisbon City Guide: Castle, Trams, Belém, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795664591/cityvora/cities/lisbon-guide-featured.jpg | https://cityvora.vercel.app/cities/lisbon/ | Published (awaiting Vercel deploy) |
 | 2026-11-25T03:43:52Z | Edinburgh | Edinburgh City Guide: Castle, Royal Mile, Old Town, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795578203/cityvora/cities/edinburgh-guide-featured.jpg | https://cityvora.vercel.app/cities/edinburgh/ | Published (awaiting Vercel deploy) |
 | 2026-11-24T03:44:36Z | Dubai | Dubai City Guide: Burj Khalifa, Marina, Old Town, Food and Practical Tips | https://res.cloudinary.com/muc9b5sj/image/upload/v1795491852/cityvora/cities/dubai-guide-featured.jpg | https://cityvora.vercel.app/cities/dubai/ | Published (awaiting Vercel deploy) |
